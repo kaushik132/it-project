@@ -91,7 +91,7 @@
     }
 
     // Reinitialize Google Translate when the page is redirected
-    window.onload = function() {
+     window.onload = function() {
         loadGoogleTranslate();
     };
 

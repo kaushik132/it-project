@@ -37,54 +37,99 @@
                    <h4 class="text-primary">Send Your Message</h4>
                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, accusamus.</p>
 
+                   @if (session()->has('message'))
+                   <div class="alert alert-success">
+                      {{-- <button type="button" class="close" data-dismiss="alert">x</button> --}}
+                      
+                      {{session()->get('message')}}
+                   </div>
+                       
+                   @endif
+             
 
-
-                   <form>
+                   <form action="{{route('contactPost')}}" method="POST">
+                     @csrf
                        <div class="row g-3">
                            <div class="col-lg-12 col-xl-6">
                                <div class="form-floating">
-                                   <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                   <input type="text" name="name" class="form-control border-0" id="name" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('name')}}" placeholder="Your Name">
                                    <label for="name">Your Name</label>
+                                   <span class="text-danger">
+                                    @error('name')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
                            </div>
                            <div class="col-lg-12 col-xl-6">
                                <div class="form-floating">
-                                   <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                   <input type="email" name="email" class="form-control border-0" id="email" placeholder="Your Email" value="{{old('email')}}">
                                    <label for="email">Your Email</label>
+                                   <span class="text-danger">
+                                    @error('email')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
                            </div>
                            <div class="col-lg-12 col-xl-6">
                                <div class="form-floating">
-                                   <input type="phone" class="form-control border-0" id="phone" placeholder="Phone">
+                                   <input type="phone" name="phone" class="form-control border-0" id="phone"  maxlength="10" oninput="this.value = this.value.replace(/[^0-9+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('phone')}}" placeholder="Phone">
                                    <label for="phone">Your Phone</label>
+                                   <span class="text-danger">
+                                    @error('phone')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
                            </div>
                            <div class="col-lg-12 col-xl-6">
                                <div class="form-floating">
-                                   <input type="text" class="form-control border-0" id="project" placeholder="Project">
+                                   <input type="text" name="project" class="form-control border-0" id="project" placeholder="Project">
                                    <label for="project">Your Project</label>
+                                   <span class="text-danger">
+                                    @error('project')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
                            </div>
                            <div class="col-12">
                                <div class="form-floating">
-                                   <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                   <input type="text" name="subject" class="form-control border-0" id="subject" placeholder="Subject">
                                    <label for="subject">Subject</label>
+                                   <span class="text-danger">
+                                    @error('subject')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
                            </div>
                            <div class="col-12">
                                <div class="form-floating">
-                                   <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
+                                   <textarea class="form-control border-0" name="message" placeholder="Leave a message here" id="message" style="height: 120px"></textarea>
                                    <label for="message">Message</label>
+                                   <span class="text-danger">
+                                    @error('message')
+                                       {{$message}}
+                                    @enderror
+                                  </span>
+               
                                </div>
 
                            </div>
                            <div class="col-12">
-                               <button class="btn btn-primary w-100 py-3">Send Message</button>
+                               <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
                            </div>
                        </div>
                    </form>
 
-                   
+
                </div>
            </div>
            <div class="col-12">
