@@ -4,118 +4,117 @@
 @php
     use Carbon\Carbon;
 
-// Assuming $item->created_at is a Carbon instance or a string in a format that Carbon can parse
+
 $date = Carbon::parse($blogData->created_at)->format('d M, Y');
 @endphp
-<div class="banner-sec inner-banner">
-    <img src="{{url('new/images/inner-banner.jpg')}}" alt="" class="banner-img">
-    <div class="banner-text">
-       <div class="container">
-          <div class="row align-items-center">
-             <div class="col-md-8">
-                <h2>Tech Story</h2>
-             </div>
-             <div class="col-md-4 text-md-end">
-                <img src="{{url('new/images/blog-img3.png')}}" alt="" class="main-img">
-             </div>
-          </div>
-       </div>
-    </div>
-    <img src="{{url('new/images/arrow-shape.png')}}" alt="" class="arrow-shape">
-    <img src="{{url('new/images/triangle-shape.png')}}" alt="" class="triangle-shape">
- </div>
 
- <section class="single-post-area">
-    <div class="container">
-       <div class="row">
-          <div class="col-lg-8 ">
 
-             <div class="main-single-img">
-                <img src="{{ asset('uploads/' . $blogData->image) }}" alt="">
-             </div>
-             <h1>{{ $blogData->title }}</h1>
-             <div class="auther">
-                <a href="javascript:void(0)">John Deo</a> - <h4>@php
-                   echo $date;
-                @endphp</h4> - <h4><a href="javascript: ;">{{$blogData->blogCategory->name}}</a></h4>
-             </div>
-             <p>{!!$blogData->description!!}</p>
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+   <div class="container text-md-start text-center py-5" style="max-width: 900px;">
+       <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Blog Details</h4>
+       <ol class="breadcrumb d-flex mb-0 wow fadeInDown" data-wow-delay="0.3s">
+           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+           <li class="breadcrumb-item"><a href="#">Blog</a></li>
+           <li class="breadcrumb-item active text-white">Blog-details</li>
+       </ol>    
+   </div>
+</div>
+<!-- Header End -->
+<!-- ------------Blog Details Start---------------------- -->
+<div class="container-fluid blog py-5">
+   <div class="container py-5">
+       <div class="row g-4 justify-content-center">
+           <div class="col-lg-8 col-xl-8 wow fadeInUp" data-wow-delay="0.2s">
+            <div><img src="{{ url('uploads/' . $blogData->image) }}" alt="blog-image" class="img-fluid"></div>
+          
+            <div class="d-flex mt-4">
+               <div><i class="bi bi-calendar2-week-fill"></i> {{$date}}</div>
+               <div class="ms-2"><i class="bi bi-person-fill"></i> Jhon Doe</div>
+            </div>
+
+            <div class="mt-4">
+        {!!$blogData->description!!}
+            </div>
+          
+           </div>
+           <div class="col-lg-4 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+            <h3>Categories</h3>
+            <div class="cate-blog-border mt-3">
+         @foreach ($blogCategory as $blogCategory)
              
-             <div class="coment-area">
-                <h3>Leave a Comment</h3>
-                <form>
-                   <div class="form-group">
-                      <textarea rows="3" placeholder="Type your message here"></textarea>
-                   </div>
-                   <div class="row">
-                      <div class="form-group col-md-4">
-                         <input type="text" placeholder="Name">
-                      </div>
-                      <div class="form-group col-md-4">
-                         <input type="email" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-4">
-                         <input type="text" placeholder="Website">
-                      </div>
-                   </div>
-                   <div class="form-group">
-                      <!-- <p class="comment-check">
-                         <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> 
-                         <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label> 
-                      </p> -->
-                      <div class="custome_checkbox">
-                         <input type="checkbox" id="check2" rows="1">  
-                         <label for="check2">Save my name, email, and website in this browser for the next time I comment.</label>
-                      </div>
-                   </div>
-                   <input type="submit" name="" value="Post Comment">
-                </form>
-             </div> 
-    
-             <!-- <div class="pagination col-12">
-                <ul class="page-nav">
-                <li class=" active"><span aria-current="page" class="page-numbers current">1</span></li>
-                <li class=""><a class="page-numbers" href="javascript:void(0)">2</a></li>
-                <li class=""><a class="page-numbers" href="javascript:void(0)">3</a></li>
-                <li class=""><a class="page-numbers" href="javascript:void(0)">4</a></li>
-                <li class=""><a class="page-numbers previous-nxt" href="javascript:void(0)"><i class="fa fa-chevron-right"></i></a></li>
-    
-                </ul>
-             </div> -->
-          </div>
-          <div class="col-lg-4 blog-sidebar">
-          <div class="widget-text search" data-aos="fade-down" data-aos-delay="200">
-             <h4>Search Blogs</h4>
-             <form>
-                <input type="search" placeholder="Search…" value="">
-                <button type="submit" class="search-submit">Search</button>
-             </form>
-          </div>
-          <div class="widget-text most-recent" data-aos="fade-down" data-aos-delay="400">
-             <h4>Most Viewed Post</h4>
-             <ul>
-               @foreach ($blog as $item)
-                   
-               <li>
-               <h5>
-                  <a href="{{route('blogDetails',$item->slug)}}">{{ $item->title }}</a>
-               </h5>
-               <h6>@php
-                   $date = Carbon::parse($blogData->created_at)->format('d M, Y');
-                   echo $date;
-               @endphp</h6>
-               </li>
-               @endforeach
-             `
-           
-             </ul>
-          </div>
-          </div>
+         <a href="#"><div class="mt-3 d-flex justify-content-between">
+             <h6>{{$blogCategory->name}}</h6>
+             <h6>{{$blogCategory->blogs_count}}</h6>
+           </div>
+          </a>
+         @endforeach
+         
+           </div>
+
+
+           <h3 class="mt-4">Recent Post</h3>
+
+           @foreach ($recentBlog as $recentBlog)
+               
+           <a href="#"><div class="d-flex mt-3">
+                <div><img src="{{ url('uploads/' . $recentBlog->image) }}" alt="blog-image" class="img-fluid recent-blog-img"></div>
+               <div class="ms-2">
+                <h5>{{$recentBlog->title}}</h5>
+                <p><i class="bi bi-calendar-week-fill"></i> {{ $recentBlog->created_at->format('d M Y') }}</p>
+               </div>
+            </div>
+            </a> 
+           @endforeach
+             
+
+  
+         
+           </div>
+
        </div>
-    </div>
-  </section>
+   </div>
+</div>
+<!-- ------------Blog Details End---------------------- -->
 
+       <!--Recent Blog Start -->
+       <div class="container-fluid blog py-5">
+           <div class="container py-5">
+               <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                   <h4 class="text-primary">Recent Blogs</h4>
+                  
+               </div>
+               <div class="row g-4 justify-content-center">
+          @foreach ($blog as $blog)
+              
+    
+                   <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                       <div class="blog-item">
+                           <div class="blog-img">
+                               <img src="{{ url('uploads/' . $blog->image) }}" class="img-fluid rounded-top w-100" alt="">
+                               <div class="blog-categiry py-2 px-4">
+                                   <span>{{$blog->blogCategory['name']}}</span>
+                               </div>
+                           </div>
+                           <div class="blog-content p-4">
+                               <div class="blog-comment d-flex justify-content-between mb-3">
+                                   <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                                   <div class="small"><span class="fa fa-calendar text-primary"></span> {{ $blog->created_at->format('d M Y') }}</div>
+                                   <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                               </div>
+                               <a href="{{url('blog-details/'.$blog->slug)}}" class="h4 d-inline-block mb-3">{{$blog->title}}</a>
+                               <p class="mb-3">{{$blog->short_content}}</p>
+                               <a href="{{url('blog-details/'.$blog->slug)}}" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                           </div>
+                       </div>
+                   </div>
 
+                   @endforeach
+       
+               </div>
+           </div>
+       </div>
+       <!-- ---------Recent Blog End----------- -->
 
 
 

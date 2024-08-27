@@ -10,6 +10,7 @@ use App\Models\BlogCategory;
 use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+
 use App\Models\HomeModify;
 
 class HomeController extends Controller
@@ -101,9 +102,10 @@ class HomeController extends Controller
     public function blogDetails($slug=null)
     {
         $title = 'Blog details';
-        
-        // $blogCategory = BlogCategory::withcount('blogs')->get(); // Filter by blog Category
+      
+        $blogCategory = BlogCategory::withcount('blogs')->get(); // Filter by blog Category
         $blog = Blog::latest()->limit(3)->get();
+        $recentBlog = Blog::latest()->limit(5)->get();
         $blogData = Blog::with('blogCategory')->where('slug',$slug)->first();
         $seo_data['seo_title'] =$blogData->seo_title;
         $seo_data['seo_description'] =$blogData->seo_description;
@@ -111,7 +113,7 @@ class HomeController extends Controller
        $canocial ='https://codepin.org/blog-details/'.$slug;
        
            
-        return view('blog-details',compact('title','blogData','blog','seo_data','canocial'));
+        return view('blog-details',compact('title','blogData','blog','seo_data','canocial','blogCategory','recentBlog'));
     }
 
 
@@ -130,11 +132,13 @@ class HomeController extends Controller
     public function contact()
     {
         $homepage = Title::first();
+        $homeData = HomeModify::first();
+       
         $seo_data['seo_title'] = $homepage->seo_title_contact;
         $seo_data['seo_description'] = $homepage->seo_des_contact;
         $seo_data['keywords'] = $homepage->seo_key_contact;
         $canocial = 'https://codepin.org/contact';
-        return view('contact',compact('seo_data','canocial'));
+        return view('contact',compact('seo_data','canocial','homeData'));
     }
 
     public function contactPost(Request $request)    

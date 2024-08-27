@@ -103,7 +103,7 @@
                                        </div>
                                        <div>
                                            <h4 class="text-white">Address</h4>
-                                           <p class="mb-0">123 Street New York.USA</p>
+                                           <p class="mb-0">{{ $homeData->address ?? '123 address' }}</p>
                                        </div>
                                    </div>
                                </div>
