@@ -1,148 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="icon" type="image/x-icon" href="{{url('new/images/f-logo.png')}}">
 
-      @if(isset($seo_data['seo_title']))
-      <title>{{ $seo_data['seo_title'] }}</title>
-      @endif
-    
-      @if(isset($seo_data['seo_description']))
+    <head>
+        <meta charset="utf-8">
+        @if(isset($seo_data['seo_title']))
+        <title>{{ $seo_data['seo_title'] }}</title>
+        @endif
+      
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   
+        @if(isset($seo_data['seo_description']))
           <meta name="description" content="{{$seo_data['seo_description']}}" />
           @endif
-    
+
           @if(isset($seo_data['keywords']))
           <meta name="keywords"  content="{{$seo_data['keywords']}}" />
           @endif  
-          
-          
-          <meta property="og:title" content="{{$seo_data['seo_title']}}">
-    <meta property="og:site_name" content="Codepin">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
 
-    @if(isset($canocial))
-    <meta property="og:url" content="{{$canocial}}">
-    @endif
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <meta property="og:description" content="{{$seo_data['seo_description']}}">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-      
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="{{url('web/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
+        <link href="{{url('web/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9RSKCL40Y"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-S9RSKCL40Y');
-</script>
-      
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="{{url('new/css/bootstrap.min.css')}}">
-      <!-- <link rel="stylesheet" href="css/main.css"> -->
-      <link rel="stylesheet" href="{{url('new/css/custom.css')}}">
-      <!--font-->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   </head>
-   <body class="full_content">
-      
-      <!-- New header -->
-      <header class="sticky header-part">
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{{url('web/css/bootstrap.min.css')}}" rel="stylesheet">
 
-         <div class="container-fluid">
-            <div class="row align-items-center">
+        <!-- Template Stylesheet -->
+        <link href="{{url('web/css/style.css')}}" rel="stylesheet">
+    </head>
 
-            <div class="col-md-3 col-6 nav-brand">
-               <a class="logo" href="{{route('index')}}">
-                  <img src="{{url('new/images/logo.png')}}" alt="CodePin Logo" class="logo-img ">
-                  <img src="{{url('new/images/f-logo.png')}}" alt="CodePin Logo" class="logo-icon ">
-               </a>
+    <body>
+        @php
+    use App\Models\HomeModify;
+    use App\Models\Navbar;
+
+    // Assuming you're fetching some data from the HomeModify model
+    $homeData = HomeModify::first(); // This could be any query
+    $navbar = Navbar::all(); // This could be any query
+@endphp
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
-            <div class="col usp-nav">
-               <nav class="d-none d-lg-block">
-                  <ul>
-                     <li class="active">
-                        <a href="{{route('index')}}">Home</a>
-                     </li>
-                     <li >
-                        <a href="{{route('about')}}">About</a>
-                     </li>
-                     <li>
-                        <a href="{{route('services')}}">Services</a>
-                     </li>
-                     <li>
-                        <a href="{{route('blogs')}}">Blogs</a>
-                     </li>
-                     <li>
-                        <a href="{{route('casestudies')}}">Case Studies</a>
-                     </li>
-                     <!-- <li>
-                        <a href="contact.html">Contact us</a>
-                     </li> -->
-                  </ul>
-               </nav>
-               <a href="{{route('contact')}}" class="btn-outline line-animation">Contact us</a>
-               <div class="menu-icon-area d-lg-none">
-                  <a href="javascript: ;" class="hummenu" id="hummenu">
-                     <div class="site-header-menu-btn  theme_menu">
-                        <span>menu</span>
-                        <div class="site-header-menu-btn-circle">
-                           <svg id="circle-anim-small" class="circle-anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                              <g class="bg" style="opacity:0.2">
-                              <path d="M4,30.51a19.21,19.21,0,1,0,0-21" transform="translate(-3.5 -0.3)" style="fill:none;stroke:#fff;stroke-width: 1;"></path>
-                              </g>
-                              <g class="over">
-                              <path d="M4,30.51a19.21,19.21,0,1,0,0-21" transform="translate(-3.5 -0.3)" style="fill: none; stroke: rgb(255, 255, 255); stroke-width: 1px; visibility: visible; stroke-dashoffset: -84.5632px; stroke-dasharray: 14.9229px, 109.486px;"></path>
-                              </g>
-                           </svg>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="ps-3">
+                                <a href="mailto:{{ $homeData->email ?? 'example@gmail.com' }}" class="text-muted small">
+                                    <i class="fas fa-envelope text-primary me-2"></i>
+                                    {{ $homeData->email ?? 'example@gmail.com' }}
+                                </a>
+                            </div>
                         </div>
-                     </div>
-                  </a>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-primary pe-3">
+                                <a class="btn p-0 text-primary me-3" href="{{ $homeData->facebook ?? '' }}"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="{{ $homeData->twitter ?? '' }}"><i class="fab fa-twitter"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="{{ $homeData->instagrame ?? '' }}"><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-0" href="{{ $homeData->linkedin ?? '' }}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                           
+                                
+                                    
+                              
+<!-- Google Translate -->
+<div id="google_element"></div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+    function loadGoogleTranslate() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_element');
+    }
 
-               </div>
+    // Reinitialize Google Translate when the page is redirected
+    window.onload = function() {
+        loadGoogleTranslate();
+    };
 
+    document.querySelectorAll('.nav-item').forEach(function(link) {
+        link.addEventListener('click', function() {
+            // Simulate a page reload or navigation event
+            setTimeout(function() {
+                loadGoogleTranslate();
+            }, 100);
+        });
+    });
+</script>
+                       
+                           
+                        </div>
+                    </div>
+
+                    
+                   
+                 
+
+
+                </div>
             </div>
+        </div>
+        <!-- Topbar End -->
 
-
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light"> 
+                    <a href="#" class="navbar-brand p-0">
+                        <img src="https://st3.depositphotos.com/43745012/44906/i/450/depositphotos_449066958-stock-photo-financial-accounting-logo-financial-logo.jpg" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            @foreach ($navbar as $navbar)
+                                
+                            <a href="{{url(''.$navbar->stug)}}" class="nav-item nav-link active">{{$navbar->title}}</a>
+                            @endforeach
+                           
+                            <div class="nav-btn px-3">
+                                <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#exampleModal"> Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <div class="position-absolute" style="top: 7px; right: 12px;">
+                                <span><i class="fa fa-comment-dots"></i></span>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column ms-3">
+                            <span>Call to Our Experts</span>
+                            <a href="tel:+ {{ $homeData->phone_no ?? '' }}"><span class="text-dark">Free: + {{ $homeData->phone_no ?? '' }}</span></a>
+                        </div>
+                    </div>
+                </nav>
             </div>
-         </div>
-      </header>
+        </div>
+        <!-- Navbar & Hero End -->
 
-      <!-- Mobile Menu -->
-      <div class="slidemenu-overlay"></div>
-      <div class="slidemenu" id="slidemenu">
-         <div class="slidemenu-header">
-           <a href="javascript: ;" class="close-menu" id="closemenu"><img src="{{url('new/images/close.png')}}" alt="hello"></a>
-         </div> 
-   
-         <div class="slidemenu-menu-area">
-            <ul class="list-unstyled slidemenu-items">
-               <li class="active">
-                  <a href="{{route('index')}}">Home</a>
-               </li>
-               <li>
-                  <a href="{{route('about')}}">About</a>
-               </li>
-               <li>
-                  <a href="{{route('services')}}">Services</a>
-               </li>
-               <li>
-                  <a href="{{route('blogs')}}">Blogs</a>
-               </li>
-               <li>
-                  <a href="{{route('casestudies')}}">Case Studies</a>
-               </li>
-            </ul>
-   
-           <div class="login-signup">
-            <a href="{{route('contact')}}" class="btn-outline line-animation">Contact us</a>
-            
-           </div>
-         </div>
-      </div>
-      <!-- End Header -->
+          <!-- Modal Search Start -->
+   <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center bg-primary">
+                <div class="input-group w-75 mx-auto d-flex">
+                    <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                    <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Search End -->
+
+<!-- Modal Get Quote Start-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+ <form action="">
+    <input type="text" class="form-control mt-2" placeholder="First Name">
+    <input type="text" class="form-control mt-2" placeholder="Last Name">
+    <input type="email" class="form-control mt-2" placeholder="Email ID">
+    <textarea name="" id="" rows="4" cols="6" class="form-control mt-2" placeholder="Message"></textarea>
+ 
+    <button type="button" class="btn btn-primary mt-3 w-100">Save</button>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Modal Get Quote End-->

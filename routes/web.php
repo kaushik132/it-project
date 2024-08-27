@@ -39,3 +39,8 @@ Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('conta
 Route::get('/search',[HomeController::class, 'search']);
 
 Route::get('sitemap.xml',[SitemapController::class, 'index']);
+ 
+
+
+
+

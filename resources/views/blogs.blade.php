@@ -5,93 +5,155 @@
 @endphp
 
 
+ <!-- Header Start -->
+ <div class="container-fluid bg-breadcrumb">
+  <div class="container text-md-start text-center py-5">
+      <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Our Blog</h4>
+      <ol class="breadcrumb d-flex mb-0 wow fadeInDown" data-wow-delay="0.3s">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Pages</a></li>
+          <li class="breadcrumb-item active text-white">Blog</li>
+      </ol>    
+  </div>
+</div>
+<!-- Header End -->
 
-<div class="banner-sec inner-banner">
-    <img src="{{url('new/images/inner-banner.jpg')}}" alt="" class="banner-img">
-    <div class="banner-text">
-       <div class="container">
-          <div class="row align-items-center">
-             <div class="col-md-8">
-                <h2>Blogs</h2>
-             </div>
-             <div class="col-md-4 text-md-end">
-                <img src="{{url('new/images/blog-img.png')}}" alt="" class="main-img">
-             </div>
-          </div>
-       </div>
-    </div>
-    <img src="{{url('new/images/arrow-shape.png')}}" alt="" class="arrow-shape">
-    <img src="{{url('new/images/triangle-shape.png')}}" alt="" class="triangle-shape">
- </div>
 
- <section class="main-blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="row row-flex justify-content-center">
-            @foreach ($blogList as $item)
-                
-            <div class="col-md-6 col-sm-4" data-aos="fade-down" data-aos-delay="200">
-              <div class="blog-box">
-                <figure>
-                  <img src="{{asset('uploads/'.$item->image)}}" alt="">
-                </figure>
-                <h5><a href="javascript: ;" >{{$item->title}}</a></h5>
-                <p>{{$item->short_content}}</p>
-                <h6></a>@php
-                  
-$date = Carbon::parse($item->created_at)->format('d M, Y');
-                    echo $date; 
-                @endphp</h6>
-                <a href="{{route('blogDetails',$item->slug)}}" class="line-animation">Read More <i class="ri-arrow-right-line"></i></a>
-              </div>
-            </div>
-            @endforeach
-       
-         
-         
-          </div>
-          <div class="d-flex justify-content-center mt-3">
-          {{$blogList->onEachSide(1)->links()}}
-          </div>
-        </div>
-        <div class="col-lg-4 blog-sidebar">
-          <div class="widget-text search" data-aos="fade-down" data-aos-delay="200">
-            <h4>Search Blogs</h4>
-
-            <form method="get" action="/search">
-              <input type="search" name="search" placeholder="Search…" value="{{isset($search) ? $search : ''}}">
-              <button type="submit" class="search-submit">Search</button>
-            </form>
-
-          </div>
-          <div class="widget-text most-recent" data-aos="fade-down" data-aos-delay="400">
-            <h4>Most Viewed Post</h4>
-            <ul>
-              <li>
-                <h5>
-                  <a href="javascript: ;">Nothing makes writing more powerful than brevity, clarity and candour</a>
-                </h5>
-                <h6>27 feb 2024</h6>
-              </li>
-              <li>
-                <h5>
-                  <a href="javascript: ;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-                </h5>
-                <h6>27 feb 2024</h6>
-              </li>
-              <li>
-                <h5>
-                  <a href="javascript: ;">We break silos because it takes more than any one check or policy or letter to tackle big issues like economic security.</a>
-                </h5>
-                <h6>27 feb 2024</h6>
-              </li>
-            </ul>
-          </div>
-        </div>
+<!-- Blog Start -->
+<div class="container-fluid blog py-5">
+  <div class="container py-5">
+      <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+          <h4 class="text-primary">From Blog</h4>
+          <h1 class="display-4 mb-4">News And Updates</h1>
+          <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+          </p>
       </div>
-    </div>
-  </section>
+      <div class="row g-4 justify-content-center">
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/laptop-blogging_23-2148000410.jpg?t=st=1724654531~exp=1724658131~hmac=fcf07200050231c68252571527cc5d776ed1d7f7a132bcd0f1c2cef729b47a76&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit amet.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/organic-flat-blog-post-illustration-with-people_23-2148955260.jpg?t=st=1724654663~exp=1724658263~hmac=bf8054ebd75eea1ea731bec4612f8c0556df5c3aec080dfe0e2e82cb6b00e0c3&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/business-people-working-illustration-concept_23-2148472774.jpg?t=st=1724654717~exp=1724658317~hmac=371115d3a313f24fac3f9d731f85b359e39fbae6e3c93f6f7e09d1eba094de71&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/laptop-blogging_23-2148000410.jpg?t=st=1724654531~exp=1724658131~hmac=fcf07200050231c68252571527cc5d776ed1d7f7a132bcd0f1c2cef729b47a76&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit amet.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/organic-flat-blog-post-illustration-with-people_23-2148955260.jpg?t=st=1724654663~exp=1724658263~hmac=bf8054ebd75eea1ea731bec4612f8c0556df5c3aec080dfe0e2e82cb6b00e0c3&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+              <div class="blog-item">
+                  <div class="blog-img">
+                      <img src="https://img.freepik.com/free-vector/business-people-working-illustration-concept_23-2148472774.jpg?t=st=1724654717~exp=1724658317~hmac=371115d3a313f24fac3f9d731f85b359e39fbae6e3c93f6f7e09d1eba094de71&w=740" class="img-fluid rounded-top w-100" alt="">
+                      <div class="blog-categiry py-2 px-4">
+                          <span>It Service</span>
+                      </div>
+                  </div>
+                  <div class="blog-content p-4">
+                      <div class="blog-comment d-flex justify-content-between mb-3">
+                          <div class="small"><span class="fa fa-user text-primary"></span> Martin.C</div>
+                          <div class="small"><span class="fa fa-calendar text-primary"></span> 30 Dec 2025</div>
+                          <div class="small"><span class="fa fa-comment-alt text-primary"></span> 6 Comments</div>
+                      </div>
+                      <a href="#" class="h4 d-inline-block mb-3">Lorem ipsum dolor sit.</a>
+                      <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius libero soluta impedit eligendi? Quibusdam, laudantium.</p>
+                      <a href="blog-detail.html" class="btn p-0">Read More  <i class="fa fa-arrow-right"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Blog End -->
 
 
 

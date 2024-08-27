@@ -1,108 +1,201 @@
-<footer class="footer">
-    <div class="container">
-       <!-- <div class="quote_text">
-          <img src="images/f-logo.png" alt="">
-          <h2>Pin your hopes on us.</h2>
-          <a href="tel:+917976838089"  class="line-animation">+91 79768 38089</a>
-       </div> -->
-       <div class="footer-title">
-          <div class="container-fluid">
-             <div class="col-md-10 offset-md-1 max-width-contant">
-                <div class="row">
-                   <div class="col-lg-6 col-md-8">
-                      <h2>Like what you see?<br>Let's talk about <br> your project.</h2>
-                   </div>
-                   <div class="col-lg-6 col-md-4 hover-circle side_padding">
-                      <a href="{{route('contact')}}">
-                         <div class="circle-next" style="transform: translate(-15%, 2%); opacity: 1; visibility: inherit;">
-                            <svg class="circle-next-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 247 247">
-                               <g class="arrow-in" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;">
-                                  <polygon class="bg-in" points="83.61 120.55 83.61 128.45 148.28 128.45 129.9 146.83 135.49 152.41 163.4 124.5 135.49 96.59 129.9 102.17 148.28 120.55 83.61 120.55" style="fill:none;stroke:#58e8a0;opacity:1;isolation:isolate"></polygon>
-                                  <polygon class="over-in" points="83.61 120.55 83.61 128.45 148.28 128.45 129.9 146.83 135.49 152.41 163.4 124.5 135.49 96.59 129.9 102.17 148.28 120.55 83.61 120.55" style="fill: none; stroke: #58e8a0; opacity: 0; visibility: hidden;"></polygon>
-                               </g>
-                               <g class="circ">
-                                  <circle class="bg-circ" cx="123.5" cy="123.5" r="123" style="fill: none; stroke: rgb(255, 255, 255); stroke-miterlimit: 10; opacity: 0.2; visibility: visible;"></circle>
-                                  <circle class="over-circ" cx="123.5" cy="123.5" r="123" style="fill: none; stroke: rgb(255, 255, 255); stroke-miterlimit: 10; visibility: visible; stroke-dashoffset: 657.757; stroke-dasharray: 773.832px, 783.832px;"></circle>
-                               </g>
-                            </svg>
-                         </div>
-                      </a>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-       <div class="footer-contact">
-          <div class="container-fluid">
-             <div class="col-md-10 offset-md-1">
-                <div class="row">
-                   <div class="col-md-6 col-lg-6">
-                      <div class="footer-contact-box">
-                         <h4>Let's have a chat</h4>
-                         <a href="tel:+9179807 02415" class="small">+91 7980702415 </a>
-                      </div>
-                   </div>
-                   <div class="col-md-6 col-lg-6  side_padding">
-                      <div class="footer-contact-box">
-                         <h4>Send us an email</h4>
-                         <a href="mailto:letscodepin@gmail.com" class="small ">letscodepin@gmail.com</a>
-                      </div>
-                   </div>
-                   <div class="col-md-6 col-lg-6">
-                      <div class="footer-contact-box">
-                         <h4>CodePin Technologies</h4>
-                         <a href="javascript: ;" target="_blank" class="small " rel=""> Arambagh, Hooghly, WB 712611 <i class="fa-solid fa-map-pin"></i></a>
-                         <a href="javascript: ;" target="_blank" class="small " rel=""> Jaipur, Rajasthan 302012 <i class="fa-solid fa-map-pin"></i></a>
-                      </div>
-                   </div>
-                   <div class="col-md-6 col-lg-6  side_padding">
-                      <div class="footer-contact-box">
-                         <h4>Social</h4>
-                         <ul>
-                            <li>
-                               <a class="small" href="javascript: ;" target="_blank">FB</a>
-                            </li>
-                            <li>
-                               <a class="small" href="javascript: ;" target="_blank">TW</a>
-                            </li>
-                            <li>
-                               <a class="small" href="javascript: ;" target="_blank">YT</a>
-                            </li>
-                            <li>
-                               <a class="small" href="javascript: ;" target="_blank">IG</a>
-                            </li>
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-                <div class="row">
-                   <div class="col-lg-12 copyright">
-                      <p>© Copyright 2024 <a href="javascript: ;"><span class="logo-icon"><img src="{{url('new/images/f-logo.png')}}"></span> CodePin Technologies</a> All rights reserved.</p>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <!-- <img src="images/scr-circle.png" alt="" class="ftr-crl"> -->
- </footer>
- <!-- end footer-section -->
- <!-- Optional JavaScript -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script src="{{url('new/js/popper.min.js')}}"></script>
- <script src="{{url('new/js/bootstrap.min.js')}}"></script>
- <!-- <script src="js/main.js"></script> -->
- <script src="{{url('new/js/typed.min.js')}}"></script>
- <script src="{{url('new/js/custom.js')}}"></script>
- <script>
-    var typing=new Typed(".text", {
-        strings: ["", "Digital marketing", "UI UX", "Web development", "App development", "E-commerce"],
-        typeSpeed: 100,
-        backSpeed: 40,
-        loop: true,
-    });
- </script>
+ <!-- Footer Start -->
+ @php
+ use App\Models\HomeModify;
 
- 
+ // Assuming you're fetching some data from the HomeModify model
+ $homeData = HomeModify::first(); // This could be any query
+@endphp
+ <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+   <div class="container py-5">
+       <div class="row g-5">
+           <div class="col-xl-9">
+               <div class="mb-5">
+                   <div class="row g-4">
+                       <div class="col-md-6 col-lg-6 col-xl-5">
+                           <div class="footer-item">
+                               <a href="index.html" class="p-0">
+                                   <h3 class="text-white"><i class="fab fa-slack me-3"></i> Lorem</h3>
+                                   <!-- <img src="img/logo.png" alt="Logo"> -->
+                               </a>
+                               <p class="text-white mb-4">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                               <div class="footer-btn d-flex">
+                                   <a class="btn btn-md-square rounded-circle me-3" href="{{ $homeData->facebook ?? '' }}"><i class="fab fa-facebook-f"></i></a>
+                                   <a class="btn btn-md-square rounded-circle me-3" href="{{ $homeData->twitter ?? '' }}"><i class="fab fa-twitter"></i></a>
+                                   <a class="btn btn-md-square rounded-circle me-3" href="{{ $homeData->instagrame ?? '' }}"><i class="fab fa-instagram"></i></a>
+                                   <a class="btn btn-md-square rounded-circle me-0" href="{{ $homeData->linkedin ?? '' }}"><i class="fab fa-linkedin-in"></i></a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-lg-6 col-xl-3">
+                           <div class="footer-item">
+                               <h4 class="text-white mb-4">Useful Links</h4>
+                               <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                               <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
+                               <a href="#"><i class="fas fa-angle-right me-2"></i> Blogs</a>
+                               <a href="#"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                           </div>
+                       </div>
+                       <div class="col-md-6 col-lg-6 col-xl-4">
+                           <div class="footer-item">
+                               <h4 class="mb-4 text-white">Instagram</h4>
+                               <div class="row g-3">
+                                   <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-1.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-1.jpg')}}" data-lightbox="footerInstagram-1" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                  </div>
+                                  <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-2.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-2.jpg')}}" data-lightbox="footerInstagram-2" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                  </div>
+                                   <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-3.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-3.jpg')}}" data-lightbox="footerInstagram-3" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                  </div>
+                                   <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-4.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-4.jpg')}}" data-lightbox="footerInstagram-4" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                  </div>
+                                   <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-5.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-5.jpg')}}" data-lightbox="footerInstagram-5" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                  </div>
+                                  <div class="col-4">
+                                       <div class="footer-instagram rounded">
+                                           <img src="{{url('web/img/instagram-footer-6.jpg')}}" class="img-fluid w-100" alt="">
+                                           <div class="footer-search-icon">
+                                               <a href="{{url('web/img/instagram-footer-6.jpg')}}" data-lightbox="footerInstagram-6" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                   <div class="row g-0">
+                       <div class="col-12">
+                           <div class="row g-4">
+                               <div class="col-lg-6 col-xl-4">
+                                   <div class="d-flex">
+                                       <div class="btn-xl-square bg-white text-primary rounded p-4 me-4">
+                                           <i class="fas fa-map-marker-alt fa-2x"></i>
+                                       </div>
+                                       <div>
+                                           <h4 class="text-white">Address</h4>
+                                           <p class="mb-0">123 Street New York.USA</p>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-lg-6 col-xl-4">
+                                   <div class="d-flex">
+                                       <div class="btn-xl-square bg-white text-primary rounded p-4 me-4">
+                                           <i class="fas fa-envelope fa-2x"></i>
+                                       </div>
+                                       <div>
+                                           <h4 class="text-white">Mail Us</h4>
+                                      <p class="mb-0">{{ $homeData->email ?? 'example@gmail.com' }}</p>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-lg-6 col-xl-4">
+                                   <div class="d-flex">
+                                       <div class="btn-xl-square bg-white text-primary rounded p-4 me-4">
+                                           <i class="fa fa-phone-alt fa-2x"></i>
+                                       </div>
+                                       <div>
+                                           <h4 class="text-white">Telephone</h4>
+                                         <p class="mb-0">{{ $homeData->phone_no ?? '' }}</p>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           
+           <div class="col-xl-3">
+               <div class="footer-item">
+                   <h4 class="text-white mb-4">Newsletter</h4>
+                   <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                   <div class="position-relative rounded-pill mb-4">
+                       <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                       <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                   </div>
+                   <div class="d-flex flex-shrink-0">
+                       <div class="footer-btn">
+                           <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                               <i class="fa fa-phone-alt fa-2x"></i>
+                               <div class="position-absolute" style="top: 2px; right: 12px;">
+                                   <span><i class="fa fa-comment-dots"></i></span>
+                               </div>
+                           </a>
+                       </div>
+                       <div class="d-flex flex-column ms-3 flex-shrink-0">
+                           <span>Call to Our Experts</span>
+                           <a href="tel:+ {{ $homeData->phone_no ?? '' }}"><span class="text-white">Free: +{{ $homeData->phone_no ?? '' }} </span></a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+   <div class="container">
+       <div class="row g-4 align-items-center">
+           <div class="col-md-12 text-center mb-md-0">
+               <span class="text-body"><i class="fas fa-copyright text-light me-2"></i> All right reserved.</span>
+           </div>
+        
+       </div>
+   </div>
+</div>
+<!-- Copyright End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+<a href="#" class="btn btn-secondary btn-lg-square rounded-circle whatsapp-icon"><i class="fab fa-whatsapp fs-3"></i></a>   
+
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="{{url('web/js/main.js')}}"></script>
 </body>
+
 </html>

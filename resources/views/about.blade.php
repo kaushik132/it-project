@@ -1,191 +1,207 @@
 @extends('dashboard.layout.main')
 @section('main-containers')
 
-     <!-- Start Banner -->
-     <div class="banner-sec inner-banner">
-        <img src="{{url('new/images/inner-banner.jpg')}}" alt="" class="banner-img">
-        <div class="banner-text">
-           <div class="container">
-              <div class="row align-items-center">
-                 <div class="col-md-8 col-sm-6">
-                    <h2>About Us</h2>
-                 </div>
-                 <div class="col-md-4 col-sm-6 text-md-end">
-                    <img src="{{url('new/images/cp-about-img.png')}}" alt="" class="main-img">
-                 </div>
-              </div>
-           </div>
-        </div>
-        <img src="{{url('new/images/arrow-shape.png')}}" alt="" class="arrow-shape">
-        <img src="{{url('new/images/triangle-shape.png')}}" alt="" class="triangle-shape">
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+         <div class="container text-md-start text-center py-5">
+             <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
+             <ol class="breadcrumb d-flex mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                 <li class="breadcrumb-item active text-white">About</li>
+             </ol>    
+         </div>
      </div>
+     <!-- Header End -->
 
-     <section class="cp-about-sec about-aection">
-        <div class="container">
-           <div class="row align-items-center">
-              <div class="col-sm-5">
-                 <div class="cp-about-img">
-                    <img src="{{url('new/images/final-we-are.jpg')}}" alt="" class="thumb_img">
-                    <!-- <img src="images/services.png" alt="" class="services-shape"> -->
-                 </div>
-              </div>
-              <div class="col-sm-7">
-                 <h2 class="lg-title">Who <span>We Are</span></h2>
-                 <h5>We specialise in web development, app development and SEO Digital Marketing</h5>
-                 <p>As a leading web development services specialising in SEO digital marketing and web app development services, we succeed at generating creative designs and digital tactics. In addition to turning these concepts into workable web apps, Our dedicated team creates winning marketing plans to elevate your product to new heights. Explore our comprehensive web development services, including top-notch SEO digital marketing solutions, to propel your online presence and business success.</p>
-              </div>
-           </div>
-        </div>
-        <img src="{{url('new/images/img-2-border.png')}}" alt="" class="img-shape">
-     </section>
 
-     <section class="cp-about primary-light line-pattern-wh">
-        <div class="container">
-           <div class="row">
-              <div class="col-md-6 order-md-3">
-                 <div class="row">
-                       <div class="col-7">
-                          <figure>
-                             <img src="{{url('new/images/cp-about-img1.jpg')}}" alt="" class="radius20">
-                          </figure>
-                       </div>
-                       <div class="col-5">
-                       <figure class="mb-md-4">
-                          <img src="{{url('new/images/cp-about-img2.jpg')}}" alt="" class="radius20">
-                       </figure>
-                       </a>
-                       <figure>
-                          <img src="{{url('new/images/cp-about-img3.jpg')}}" alt="" class="radius20">
-                       </figure>
-                       </a>
-                       </div>
+     <!-- About Start -->
+     <div class="container-fluid bg-light about pb-5">
+         <div class="container pb-5">
+             <div class="row g-5">
+                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                     <div class="about-item-content bg-white rounded p-5 h-100">
+                         <h4 class="text-primary">About Our Company</h4>
+                         <h1 class="display-4 mb-4">Lorem ipsum dolor sit amet.</h1>
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt debitis sint tempora. Corporis consequatur illo blanditiis voluptates aperiam quos aliquam totam aliquid rem explicabo,
+                         </p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium recusandae eligendi modi hic
+                         </p>
+                         <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We can save your money.</p>
+                         <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Production or trading of good</p>
+                         <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Our life insurance is flexible</p>
+                         <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
+                     </div>
                  </div>
-              </div>
-              <div class="col-lg-10 title">
-                 <h2 class="lg-title">Grow Your Business Online: Websites, Apps, & Marketing by <span class="primary-text">CodePin</span></h2>
-              </div>
-              <div class="col-md-6 order-md-2 my-auto">
-                 <h3>Data-Driven Strategies & Expert Development for Maximum Impact</h3>
-                 <p>CodePin is your one-stop shop for all things digital. Our passionate team of web developers, app developers, and marketing specialists are laser-focused on helping businesses like yours achieve online success. From crafting <strong>high-converting websites</strong> and <strong>user-centric mobile apps</strong> to developing <strong>data-driven marketing campaigns</strong> that reach your target audience, we empower you to navigate the ever-changing digital landscape with confidence.</p>
-                 <div class="arrow mt-3 mt-md-5">
-                    <img src="{{url('new/images/right-arrow.png')}}" alt="">
+                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                     <div class="bg-white rounded p-5 h-100">
+                         <div class="row g-4 justify-content-center">
+                             <div class="col-12">
+                                 <div class="rounded bg-light">
+                                     <img src="https://img.freepik.com/premium-vector/picture-people-working-computer-with-man-working-computer_1135235-237.jpg?w=740" class="img-fluid rounded w-100" alt="">
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="counter-item bg-light rounded p-3 h-100">
+                                     <div class="counter-counting">
+                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                         <span class="h1 fw-bold text-primary">+</span>
+                                     </div>
+                                     <h4 class="mb-0 text-dark">Lorem, ipsum.</h4>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="counter-item bg-light rounded p-3 h-100">
+                                     <div class="counter-counting">
+                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                         <span class="h1 fw-bold text-primary">+</span>
+                                     </div>
+                                     <h4 class="mb-0 text-dark">Lorem, ipsum.</h4>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="counter-item bg-light rounded p-3 h-100">
+                                     <div class="counter-counting">
+                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                         <span class="h1 fw-bold text-primary">+</span>
+                                     </div>
+                                     <h4 class="mb-0 text-dark">Lorem, ipsum.</h4>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="counter-item bg-light rounded p-3 h-100">
+                                     <div class="counter-counting">
+                                         <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                         <span class="h1 fw-bold text-primary">+</span>
+                                     </div>
+                                     <h4 class="mb-0 text-dark">Lorem, ipsum.</h4>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
                  </div>
-              </div>
-           </div>
-        </div>
-     </section>
-     
-     <section class="cp-about dark-light">
-        <div class="container">
-           <div class="row">
-              <div class="col-12 title">
-                 <h2 class="lg-title">Your Trusted Partner in Digital Growth</h2>
-              </div>
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <img src="{{url('new/images/cp-about-img4.jpg')}}" alt="" class="radius20 mb-md-4">
-                    <h3><a href="#">Digital Marketing</a></h3>
-                    <p>We don't just create campaigns, we drive results. From SEO optimization to social media management, we deliver targeted strategies that attract, engage, and convert your ideal customers.</p>
-                 </div>
-              </div>
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <img src="{{url('new/images/cp-about-img5.jpg')}}" alt="" class="radius20 mb-md-4">
-                    <h3><a href="#">Web Development</a></h3>
-                    <p>We craft beautiful, functional websites that not only look amazing but also deliver an exceptional user experience. From custom development to CMS solutions, we build sites that work for you.</p>
-                 </div>
-              </div>
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <img src="{{url('new/images/cp-about-img6.jpg')}}" alt="" class="radius20 mb-md-4">
-                    <h3><a href="#">App Development</a></h3>
-                    <p>We bring your mobile app ideas to life with innovative functionalities and seamless user interfaces. Whether you need a native app or a hybrid solution, we deliver high-quality results.</p>
-                 </div>
-              </div>
-           </div>
-        </div>
+             </div>
+         </div>
+     </div>
+     <!-- About End -->
 
-        <div class="container contact-bd-sec line-pattern text-center">
-           <div class="row">
-              <div class="col-lg-9 mx-auto">
-                 <img src="{{url('new/images/happy.png')}}" alt="">
-                 <h2 class="lg-title">Ready to take your business to the next level?</h2>
-                 <h4 class="mb-4">Contact <span class="primary-text">CodePin</span> today for a free consultation!</h4>
-                 <a href="{{route('contact')}}" class="btn-outline line-animation">Contact Us</a>
-              </div>
-           </div>
-        </div>
-     </section>
 
-     <section class="cp-about solution">
-        <div class="container">
-           <div class="row mb-md-5">
-              <div class="col-md-6 order-md-2">
-                 <div class="rds"><img src="{{url('new/images/cp-about-img7.jpg')}}" alt="images" class="img-fluid "></div>
-              </div>
-              <div class="col-md-6 order-md-1">
-                 <h2 class="lg-title">Pixel-Perfect Solutions: Building Your Online Success Story</h2>
-              </div>
-           </div>
-           <div class="row">
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <h3><span>1.</span> Collaborative Client Partnerships</h3>
-                    <p>This emphasizes the collaborative approach and open communication, key aspects for successful digital marketing campaigns.</p>
+     <!-- Feature Start -->
+     <div class="container-fluid feature bg-light py-5">
+         <div class="container py-5">
+             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                 <h4 class="text-primary">Our Features</h4>
+                 <h1 class="display-4 mb-4">Lorem ipsum dolor sit amet.</h1>
+                 <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
+                 </p>
+             </div>
+             <div class="row g-4">
+                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                     <div class="feature-item p-4 pt-0">
+                         <div class="feature-icon p-4 mb-4">
+                             <i class="fas fa-tv fa-3x"></i>
+                         </div>
+                         <h4 class="mb-4">Lorem, ipsum.</h4>
+                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
+                         </p>
+                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                     </div>
                  </div>
-              </div>
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <h3><span>2.</span> Data-Driven Marketing Strategies</h3>
-                    <p>Highlights the data-driven approach and focus on return on investment (ROI), which are valuable aspects for businesses.</p>
+                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                     <div class="feature-item p-4 pt-0">
+                         <div class="feature-icon p-4 mb-4">
+                             <i class="fas fa-database fa-3x"></i>
+                         </div>
+                         <h4 class="mb-4">Lorem, ipsum.</h4>
+                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
+                         </p>
+                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                     </div>
                  </div>
-              </div>
-              <div class="col-md-4">
-                 <div class="inner-box">
-                    <h3><span>3.</span> Scalable & Future-Proof Digital Solutions</h3>
-                    <p>Emphasizes the scalability of their solutions and future-proofing, important factors for businesses planning long-term growth.</p>
+                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                     <div class="feature-item p-4 pt-0">
+                         <div class="feature-icon p-4 mb-4">
+                             <i class="fa fa-robot fa-3x"></i>
+                         </div>
+                         <h4 class="mb-4">Lorem, ipsum.</h4>
+                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
+                         </p>
+                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                     </div>
                  </div>
-              </div>
-           </div>
-        </div>
-     </section>
-     <section class="basic_section team line-pattern" >
-        <div class="container">
-           <div class="row ">
-              <div class="col-lg-12">
-                 <div class="inner_title text-center">
-                    <h5>OUR TEAM</h5>
-                    <h1>We Have Best Member</h1>
+                 <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                     <div class="feature-item p-4 pt-0">
+                         <div class="feature-icon p-4 mb-4">
+                             <i class="fa fa-network-wired fa-3x"></i>
+                         </div>
+                         <h4 class="mb-4">Lorem, ipsum.</h4>
+                         <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic laborum odit pariatur...
+                         </p>
+                         <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                     </div>
                  </div>
-              </div>
-              <div class="col-lg-12">
-                 <div class="team_list mrg_100">
-                    <div class="member_box">
-                       <img src="{{url('new/images/member3.jpg')}}" class="img-fluid">
-                       <h5>Gavin Graham</h5>
-                       <h6>Ceo</h6>
-                    </div>
-                    <div class="member_box">
-                       <img src="{{url('new/images/member1.jpg')}}" class="img-fluid">
-                       <h5>Theresa Knox</h5>
-                       <h6>Designer</h6>
-                    </div>
-                    <div class="member_box">
-                       <img src="{{url('new/images/member2.jpg')}}" class="img-fluid">
-                       <h5>Joshua  Hamilton</h5>
-                       <h6>App</h6>
-                    </div>
-                    <div class="member_box">
-                       <img src="{{url('new/images/member4.jpg')}}" class="img-fluid">
-                       <h5>Amelia  Miller</h5>
-                       <h6>Developers</h6>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </section>
+             </div>
+         </div>
+     </div>
+     <!-- Feature End -->
 
+     <!-- FAQs Start -->
+     <div class="container-fluid faq-section bg-light py-5">
+         <div class="container py-5">
+             <div class="row g-5 align-items-center">
+                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                     <div class="h-100">
+                         <div class="mb-5">
+                             <h4 class="text-primary">Some Important FAQ's</h4>
+                             <h1 class="display-4 mb-0">Common Frequently Asked Questions</h1>
+                         </div>
+                         <div class="accordion" id="accordionExample">
+                             <div class="accordion-item">
+                                 <h2 class="accordion-header" id="headingOne">
+                                     <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                         Q: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, maxime!?
+                                     </button>
+                                 </h2>
+                                 <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                     <div class="accordion-body rounded">
+                                         A: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam neque quod dolores! Aliquid modi sequi laudantium, voluptatum iste consequatur sed obcaecati suscipit harum at eum?
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="accordion-item">
+                                 <h2 class="accordion-header" id="headingTwo">
+                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                         Q: Lorem ipsum dolor sit, amet consectetur adipisicing elit.?
+                                     </button>
+                                 </h2>
+                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                     <div class="accordion-body">
+                                         A: Lorem ipsum dolor sit amet consectetur adipisicing elit. At perferendis aperiam labore ab nesciunt animi, quaerat aliquam non veniam et!
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="accordion-item">
+                                 <h2 class="accordion-header" id="headingThree">
+                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                         Q: Lorem ipsum dolor sit amet, consectetur adipisicing.?
+                                     </button>
+                                 </h2>
+                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                     <div class="accordion-body">
+                                         A: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga tenetur non debitis dolor voluptatum? Voluptas.
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                     <img src="https://img.freepik.com/free-vector/people-ask-frequently-asked-questions_102902-2339.jpg?t=st=1724654472~exp=1724658072~hmac=e8d1f3d50497c35a112e0ef691231e2791e7e4797c3473d88b7c4cc9ab81765c&w=740" class="img-fluid w-100" alt="">
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- FAQs End -->
 
 
 @endsection

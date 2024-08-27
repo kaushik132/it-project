@@ -10,9 +10,13 @@ use App\Models\BlogCategory;
 use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\HomeModify;
 
 class HomeController extends Controller
 {
+
+
+
     public function index() 
     {
         $servicelist = Service::latest()->limit(6)->get();
