@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 08:35 AM
+-- Generation Time: Aug 28, 2024 at 12:57 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -44,26 +44,33 @@ CREATE TABLE `admin_menu` (
 --
 
 INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `permission`, `created_at`, `updated_at`) VALUES
-(1, 0, 4, 'Dashboard', 'icon-chart-bar', '/', NULL, NULL, '2024-05-02 07:50:00'),
-(2, 0, 5, 'Admin', 'icon-server', '', NULL, NULL, '2024-05-02 07:50:00'),
-(3, 2, 6, 'Users', 'icon-users', 'auth/users', NULL, NULL, '2024-05-02 07:50:00'),
-(4, 2, 7, 'Roles', 'icon-user', 'auth/roles', NULL, NULL, '2024-05-02 07:50:00'),
-(5, 2, 8, 'Permission', 'icon-ban', 'auth/permissions', NULL, NULL, '2024-05-02 07:50:00'),
-(6, 2, 9, 'Menu', 'icon-bars', 'auth/menu', NULL, NULL, '2024-05-02 07:50:00'),
-(7, 2, 10, 'Operation log', 'icon-history', 'auth/logs', NULL, NULL, '2024-05-02 07:50:00'),
-(8, 0, 11, 'Helpers', 'icon-cogs', '', NULL, '2024-05-01 00:10:04', '2024-05-02 07:50:00'),
-(9, 8, 12, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2024-05-01 00:10:04', '2024-05-02 07:50:00'),
-(10, 8, 13, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2024-05-01 00:10:04', '2024-05-02 07:50:00'),
-(11, 8, 14, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2024-05-01 00:10:04', '2024-05-02 07:50:00'),
-(12, 8, 15, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2024-05-01 00:10:04', '2024-05-02 07:50:00'),
-(13, 0, 16, 'Contacts', 'icon-file', 'contacts', NULL, '2024-05-01 07:25:32', '2024-05-02 07:50:00'),
+(1, 0, 10, 'Dashboard', 'icon-chart-bar', '/', NULL, NULL, '2024-08-28 05:20:57'),
+(2, 0, 11, 'Admin', 'icon-server', '', NULL, NULL, '2024-08-28 05:20:57'),
+(3, 2, 12, 'Users', 'icon-users', 'auth/users', NULL, NULL, '2024-08-28 05:20:57'),
+(4, 2, 13, 'Roles', 'icon-user', 'auth/roles', NULL, NULL, '2024-08-28 05:20:57'),
+(5, 2, 14, 'Permission', 'icon-ban', 'auth/permissions', NULL, NULL, '2024-08-28 05:20:57'),
+(6, 2, 15, 'Menu', 'icon-bars', 'auth/menu', NULL, NULL, '2024-08-28 05:20:57'),
+(7, 2, 16, 'Operation log', 'icon-history', 'auth/logs', NULL, NULL, '2024-08-28 05:20:57'),
+(8, 0, 17, 'Helpers', 'icon-cogs', '', NULL, '2024-05-01 00:10:04', '2024-08-28 05:20:57'),
+(9, 8, 18, 'Scaffold', 'icon-keyboard', 'helpers/scaffold', NULL, '2024-05-01 00:10:04', '2024-08-28 05:20:57'),
+(10, 8, 19, 'Database terminal', 'icon-database', 'helpers/terminal/database', NULL, '2024-05-01 00:10:04', '2024-08-28 05:20:57'),
+(11, 8, 20, 'Laravel artisan', 'icon-terminal', 'helpers/terminal/artisan', NULL, '2024-05-01 00:10:04', '2024-08-28 05:20:57'),
+(12, 8, 21, 'Routes', 'icon-list-alt', 'helpers/routes', NULL, '2024-05-01 00:10:04', '2024-08-28 05:20:57'),
+(13, 0, 22, 'Contacts', 'icon-file', 'contacts', NULL, '2024-05-01 07:25:32', '2024-08-28 05:20:57'),
 (14, 20, 3, 'Blog-categories', 'icon-file', 'blog-categories', NULL, '2024-05-02 02:02:53', '2024-05-03 05:02:30'),
 (15, 20, 2, 'Blogs', 'icon-file', 'blogs', NULL, '2024-05-02 02:17:54', '2024-05-03 05:02:09'),
-(16, 0, 17, 'Titles', 'icon-file', 'titles', NULL, '2024-05-02 06:25:02', '2024-05-02 07:50:00'),
-(17, 21, 18, 'Service-categories', 'icon-file', 'service-categories', NULL, '2024-05-02 07:47:37', '2024-05-03 05:04:06'),
-(19, 21, 18, 'Services', 'icon-file', 'services', NULL, '2024-05-03 00:17:38', '2024-05-03 05:03:45'),
-(20, 0, 0, 'Blog Section', 'icon-archive', NULL, '*', '2024-05-03 05:01:57', '2024-05-03 05:01:57'),
-(21, 0, 0, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-05-03 05:03:27');
+(16, 0, 23, 'Titles', 'icon-file', 'titles', NULL, '2024-05-02 06:25:02', '2024-08-28 05:20:57'),
+(17, 21, 5, 'Service-categories', 'icon-file', 'service-categories', NULL, '2024-05-02 07:47:37', '2024-08-28 05:20:57'),
+(19, 21, 6, 'Services', 'icon-file', 'services', NULL, '2024-05-03 00:17:38', '2024-08-28 05:20:57'),
+(20, 0, 1, 'Blog Section', 'icon-archive', NULL, '*', '2024-05-03 05:01:57', '2024-08-28 05:20:57'),
+(21, 0, 4, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-08-28 05:20:57'),
+(22, 0, 24, 'Header Update', 'icon-file', 'home-modifies', NULL, '2024-08-27 00:02:40', '2024-08-28 05:20:57'),
+(23, 0, 25, 'Navbars', 'icon-file', 'navbars', NULL, '2024-08-27 00:45:17', '2024-08-28 05:20:57'),
+(24, 0, 26, 'Quotes', 'icon-file', 'quotes', NULL, '2024-08-27 23:26:34', '2024-08-28 05:20:57'),
+(25, 28, 9, 'Homefaqs', 'icon-file', 'homefaqs', NULL, '2024-08-28 00:05:56', '2024-08-28 05:20:57'),
+(26, 0, 27, 'Testimonials', 'icon-file', 'testimonials', NULL, '2024-08-28 04:30:33', '2024-08-28 05:20:57'),
+(27, 28, 8, 'Homebanners', 'icon-file', 'homebanners', NULL, '2024-08-28 05:08:33', '2024-08-28 05:20:57'),
+(28, 0, 7, 'Home', 'icon-archive', NULL, '*', '2024-08-28 05:19:57', '2024-08-28 05:20:57');
 
 -- --------------------------------------------------------
 
@@ -416,7 +423,230 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (326, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-05-03 06:13:07', '2024-05-03 06:13:07'),
 (327, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-05-03 06:13:09', '2024-05-03 06:13:09'),
 (328, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-05-03 06:13:15', '2024-05-03 06:13:15'),
-(329, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-05-03 06:13:24', '2024-05-03 06:13:24');
+(329, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-05-03 06:13:24', '2024-05-03 06:13:24'),
+(330, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 01:23:10', '2024-08-26 01:23:10'),
+(331, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 01:23:56', '2024-08-26 01:23:56'),
+(332, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:00', '2024-08-26 01:24:00'),
+(333, 1, 'admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"Administrators\",\"password\":\"*****-filtered-out-*****\",\"password_confirmation\":\"$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9\\/mIiQPyhPsWi7gC\",\"_token\":\"bpZFduGtaX7y4TR4ogGCkh5tvVTMxPOvp9Mr9sXK\",\"_method\":\"PUT\"}', '2024-08-26 01:24:16', '2024-08-26 01:24:16'),
+(334, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:17', '2024-08-26 01:24:17'),
+(335, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:19', '2024-08-26 01:24:19'),
+(336, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:23', '2024-08-26 01:24:23'),
+(337, 1, 'admin/auth/logout', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:35', '2024-08-26 01:24:35'),
+(338, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 01:24:43', '2024-08-26 01:24:43'),
+(339, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-26 01:25:56', '2024-08-26 01:25:56'),
+(340, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-26 01:25:59', '2024-08-26 01:25:59'),
+(341, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"fbZplSojjEXEzYRIaKbIt08Zg7fr9TOndtPcanQ9\",\"_method\":\"PUT\"}', '2024-08-26 01:26:04', '2024-08-26 01:26:04'),
+(342, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-26 01:26:04', '2024-08-26 01:26:04'),
+(343, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-26 01:46:53', '2024-08-26 01:46:53'),
+(344, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-26 23:18:50', '2024-08-26 23:18:50'),
+(345, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-26 23:19:00', '2024-08-26 23:19:00'),
+(346, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-26 23:38:09', '2024-08-26 23:38:09'),
+(347, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"home\",\"model_name\":\"App\\\\Models\\\\HomeModify\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\HomeModifController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"email\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"facebook\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"twitter\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"instagrame\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"linkedin\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"phone_no\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"whatapp\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"address\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"call_1\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"call_2\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:02:39', '2024-08-27 00:02:39'),
+(348, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 00:02:41', '2024-08-27 00:02:41'),
+(349, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 00:03:45', '2024-08-27 00:03:45'),
+(350, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 00:03:47', '2024-08-27 00:03:47'),
+(351, 1, 'admin/home-modifies/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:03:56', '2024-08-27 00:03:56'),
+(352, 1, 'admin/home-modifies', 'POST', '127.0.0.1', '{\"email\":\"admin@admin.com\",\"facebook\":null,\"twitter\":null,\"instagrame\":null,\"linkedin\":null,\"phone_no\":\"08306449106\",\"whatapp\":null,\"address\":\"100 nand vatika , Kund road,jai singh pura ,Khor\",\"call_1\":null,\"call_2\":null,\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:20:12', '2024-08-27 00:20:12'),
+(353, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 00:20:13', '2024-08-27 00:20:13'),
+(354, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 00:26:17', '2024-08-27 00:26:17'),
+(355, 1, 'admin/home-modifies/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 00:26:18', '2024-08-27 00:26:18'),
+(356, 1, 'admin/home-modifies/1', 'PUT', '127.0.0.1', '{\"email\":\"admin@admin.com\",\"facebook\":\"https:\\/\\/www.facebook.com\\/\",\"twitter\":\"https:\\/\\/x.com\\/?lang=en\",\"instagrame\":\"https:\\/\\/www.instagram.com\\/\",\"linkedin\":\"https:\\/\\/www.linkedin.com\\/\",\"phone_no\":\"08306449106\",\"whatapp\":\"1234556788\",\"address\":\"100 nand vatika , Kund road,jai singh pura ,Khor\",\"call_1\":null,\"call_2\":null,\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 00:28:10', '2024-08-27 00:28:10'),
+(357, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 00:28:10', '2024-08-27 00:28:10'),
+(358, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 00:44:08', '2024-08-27 00:44:08'),
+(359, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"navbar\",\"model_name\":\"App\\\\Models\\\\Navbar\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\NavbarController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"stug\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":null,\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:45:17', '2024-08-27 00:45:17'),
+(360, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 00:45:18', '2024-08-27 00:45:18'),
+(361, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 00:45:31', '2024-08-27 00:45:31'),
+(362, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:45:34', '2024-08-27 00:45:34'),
+(363, 1, 'admin/navbars/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:45:36', '2024-08-27 00:45:36'),
+(364, 1, 'admin/navbars', 'POST', '127.0.0.1', '{\"title\":\"Home\",\"stug\":\"\\/\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:46:34', '2024-08-27 00:46:34'),
+(365, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:46:34', '2024-08-27 00:46:34'),
+(366, 1, 'admin/navbars/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:46:36', '2024-08-27 00:46:36'),
+(367, 1, 'admin/navbars', 'POST', '127.0.0.1', '{\"title\":\"About\",\"stug\":\"about\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:47:04', '2024-08-27 00:47:04'),
+(368, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:47:04', '2024-08-27 00:47:04'),
+(369, 1, 'admin/navbars/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:47:24', '2024-08-27 00:47:24'),
+(370, 1, 'admin/navbars', 'POST', '127.0.0.1', '{\"title\":\"Services\",\"stug\":\"services\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:47:42', '2024-08-27 00:47:42'),
+(371, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:47:42', '2024-08-27 00:47:42'),
+(372, 1, 'admin/navbars/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:48:04', '2024-08-27 00:48:04'),
+(373, 1, 'admin/navbars', 'POST', '127.0.0.1', '{\"title\":\"Blog\",\"stug\":\"blogs\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:48:10', '2024-08-27 00:48:10'),
+(374, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:48:11', '2024-08-27 00:48:11'),
+(375, 1, 'admin/navbars/create', 'GET', '127.0.0.1', '[]', '2024-08-27 00:48:13', '2024-08-27 00:48:13'),
+(376, 1, 'admin/navbars', 'POST', '127.0.0.1', '{\"title\":\"Contact\",\"stug\":\"contact\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\"}', '2024-08-27 00:48:42', '2024-08-27 00:48:42'),
+(377, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:48:43', '2024-08-27 00:48:43'),
+(378, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 00:52:41', '2024-08-27 00:52:41'),
+(379, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:14', '2024-08-27 01:22:14'),
+(380, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:17', '2024-08-27 01:22:17'),
+(381, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 01:22:30', '2024-08-27 01:22:30'),
+(382, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:30', '2024-08-27 01:22:30'),
+(383, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"image_file_del_\":\"images\\/digital-marketing-details.jpg,\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 01:22:49', '2024-08-27 01:22:49'),
+(384, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:49', '2024-08-27 01:22:49'),
+(385, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 01:22:52', '2024-08-27 01:22:52'),
+(386, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:53', '2024-08-27 01:22:53'),
+(387, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:22:55', '2024-08-27 01:22:55'),
+(388, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 01:24:30', '2024-08-27 01:24:30'),
+(389, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:24:31', '2024-08-27 01:24:31'),
+(390, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:24:57', '2024-08-27 01:24:57'),
+(391, 1, 'admin/services/6', 'PUT', '127.0.0.1', '{\"service_category_id\":\"8\",\"search_terms\":null,\"title\":\"Laborum Laboris sun\",\"slug\":\"laborum-laboris-sun\",\"short_content\":\"Omnis voluptatem pla\",\"alt\":\"Est voluptate verita\",\"url\":\"https:\\/\\/www.mynycumyc.co.uk\",\"description\":\"<p><strong>Custom Software<\\/strong><\\/p>\",\"seo_title\":\"Est molestias totam\",\"seo_description\":\"Quisquam reprehender\",\"seo_keyword\":\"Cupiditate modi expe\",\"question\":\"Non et minus adipisc\",\"answer\":\"Eaque velit unde do\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 01:26:51', '2024-08-27 01:26:51'),
+(392, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:26:52', '2024-08-27 01:26:52'),
+(393, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:40:15', '2024-08-27 01:40:15'),
+(394, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:40:18', '2024-08-27 01:40:18'),
+(395, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:41:38', '2024-08-27 01:41:38'),
+(396, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 01:42:08', '2024-08-27 01:42:08'),
+(397, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-27 01:46:03', '2024-08-27 01:46:03'),
+(398, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-27 07:12:37', '2024-08-27 07:12:37'),
+(399, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:12:42', '2024-08-27 07:12:42'),
+(400, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:15:53', '2024-08-27 07:15:53'),
+(401, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:18:22', '2024-08-27 07:18:22'),
+(402, 1, 'admin/contacts/18/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 07:19:54', '2024-08-27 07:19:54'),
+(403, 1, 'admin/contacts/18', 'PUT', '127.0.0.1', '{\"name\":\"user\",\"email\":\"user@gmail.com\",\"phone\":\"1234567898\",\"project\":\"UX project\",\"subject\":\"UX Designing\",\"budget\":null,\"message\":\"hello this is testing purpose not for live\",\"_token\":\"hBuPqKZfPPyBJl0jGWSMeZDTRQTumH3cYAKdMYps\",\"_method\":\"PUT\"}', '2024-08-27 07:20:07', '2024-08-27 07:20:07'),
+(404, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:08', '2024-08-27 07:20:08'),
+(405, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:19', '2024-08-27 07:20:19'),
+(406, 1, 'admin/contacts/18/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:20', '2024-08-27 07:20:20'),
+(407, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:22', '2024-08-27 07:20:22'),
+(408, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:34', '2024-08-27 07:20:34'),
+(409, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:40', '2024-08-27 07:20:40'),
+(410, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:42', '2024-08-27 07:20:42'),
+(411, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:45', '2024-08-27 07:20:45'),
+(412, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:52', '2024-08-27 07:20:52'),
+(413, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:56', '2024-08-27 07:20:56'),
+(414, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-27 07:20:59', '2024-08-27 07:20:59'),
+(415, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-27 07:58:03', '2024-08-27 07:58:03'),
+(416, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-27 07:58:13', '2024-08-27 07:58:13'),
+(417, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-27 07:58:15', '2024-08-27 07:58:15'),
+(418, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 07:58:17', '2024-08-27 07:58:17'),
+(419, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 07:58:18', '2024-08-27 07:58:18'),
+(420, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-27 23:24:43', '2024-08-27 23:24:43'),
+(421, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-27 23:24:50', '2024-08-27 23:24:50'),
+(422, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-27 23:24:52', '2024-08-27 23:24:52'),
+(423, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-27 23:24:56', '2024-08-27 23:24:56'),
+(424, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 23:25:37', '2024-08-27 23:25:37'),
+(425, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"quote\",\"model_name\":\"App\\\\Models\\\\Quote\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\QuoteController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"fname\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"lname\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"email\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"message\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-27 23:26:32', '2024-08-27 23:26:32'),
+(426, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 23:26:35', '2024-08-27 23:26:35'),
+(427, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-27 23:26:47', '2024-08-27 23:26:47'),
+(428, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-27 23:26:51', '2024-08-27 23:26:51'),
+(429, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-27 23:44:36', '2024-08-27 23:44:36'),
+(430, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 00:04:43', '2024-08-28 00:04:43'),
+(431, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"homefaq\",\"model_name\":\"App\\\\Models\\\\Homefaq\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\HomeFaqController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"question\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"answer\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 00:05:55', '2024-08-28 00:05:55'),
+(432, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 00:05:56', '2024-08-28 00:05:56'),
+(433, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 00:06:50', '2024-08-28 00:06:50'),
+(434, 1, 'admin/homefaqs', 'GET', '127.0.0.1', '[]', '2024-08-28 00:06:53', '2024-08-28 00:06:53'),
+(435, 1, 'admin/homefaqs/create', 'GET', '127.0.0.1', '[]', '2024-08-28 00:06:55', '2024-08-28 00:06:55'),
+(436, 1, 'admin/homefaqs', 'POST', '127.0.0.1', '{\"question\":\"Question1\",\"answer\":\"Answer1\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 00:07:21', '2024-08-28 00:07:21'),
+(437, 1, 'admin/homefaqs', 'GET', '127.0.0.1', '[]', '2024-08-28 00:07:22', '2024-08-28 00:07:22'),
+(438, 1, 'admin/homefaqs/create', 'GET', '127.0.0.1', '[]', '2024-08-28 00:07:57', '2024-08-28 00:07:57'),
+(439, 1, 'admin/homefaqs', 'POST', '127.0.0.1', '{\"question\":\"Question2\",\"answer\":\"Answer2\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 00:08:09', '2024-08-28 00:08:09'),
+(440, 1, 'admin/homefaqs', 'GET', '127.0.0.1', '[]', '2024-08-28 00:08:09', '2024-08-28 00:08:09'),
+(441, 1, 'admin/homefaqs/create', 'GET', '127.0.0.1', '[]', '2024-08-28 00:08:11', '2024-08-28 00:08:11'),
+(442, 1, 'admin/homefaqs', 'POST', '127.0.0.1', '{\"question\":\"Question3\",\"answer\":\"Answer3\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 00:08:23', '2024-08-28 00:08:23'),
+(443, 1, 'admin/homefaqs', 'GET', '127.0.0.1', '[]', '2024-08-28 00:08:24', '2024-08-28 00:08:24'),
+(444, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-28 00:47:30', '2024-08-28 00:47:30'),
+(445, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-28 00:54:22', '2024-08-28 00:54:22'),
+(446, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 00:54:24', '2024-08-28 00:54:24'),
+(447, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 00:54:28', '2024-08-28 00:54:28'),
+(448, 1, 'admin/titles/1', 'PUT', '127.0.0.1', '{\"seo_title_home\":\"home title\",\"seo_des_home\":\"home des\",\"seo_key_home\":\"home key\",\"seo_title_about\":\"about title\",\"seo_des_about\":\"about des\",\"seo_key_about\":\"about key\",\"seo_title_services\":\"services Title\",\"seo_des_services\":\"services des\",\"seo_key_services\":\"services key\",\"seo_title_blog\":\"blog title\",\"seo_des_blog\":\"blog des\",\"seo_key_blog\":\"blog key\",\"seo_title_case\":\"case title\",\"seo_des_case\":\"case des\",\"seo_key_case\":\"case key\",\"seo_title_contact\":\"contact title\",\"seo_des_contact\":\"contact des\",\"seo_key_contact\":\"contact key\",\"seo_title_search\":\"Search Title\",\"seo_des_search\":\"Search Des\",\"seo_key_search\":\"Search Key\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 00:54:41', '2024-08-28 00:54:41'),
+(449, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 00:54:42', '2024-08-28 00:54:42'),
+(450, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:08:21', '2024-08-28 01:08:21'),
+(451, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:10:42', '2024-08-28 01:10:42'),
+(452, 1, 'admin/navbars', 'GET', '127.0.0.1', '[]', '2024-08-28 01:10:53', '2024-08-28 01:10:53'),
+(453, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-28 01:11:10', '2024-08-28 01:11:10'),
+(454, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-28 01:11:43', '2024-08-28 01:11:43'),
+(455, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-28 01:12:47', '2024-08-28 01:12:47'),
+(456, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 01:13:41', '2024-08-28 01:13:41'),
+(457, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:13:46', '2024-08-28 01:13:46'),
+(458, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 01:13:54', '2024-08-28 01:13:54'),
+(459, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:03', '2024-08-28 01:14:03'),
+(460, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:05', '2024-08-28 01:14:05'),
+(461, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:12', '2024-08-28 01:14:12'),
+(462, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:14', '2024-08-28 01:14:14'),
+(463, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:15', '2024-08-28 01:14:15'),
+(464, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:18', '2024-08-28 01:14:18'),
+(465, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-28 01:14:57', '2024-08-28 01:14:57'),
+(466, 1, 'admin/homefaqs', 'GET', '127.0.0.1', '[]', '2024-08-28 01:15:00', '2024-08-28 01:15:00'),
+(467, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 01:48:22', '2024-08-28 01:48:22'),
+(468, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:48:24', '2024-08-28 01:48:24'),
+(469, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:49:46', '2024-08-28 01:49:46'),
+(470, 1, 'admin/titles/1', 'PUT', '127.0.0.1', '{\"seo_title_home\":\"home title\",\"seo_des_home\":\"home des\",\"seo_key_home\":\"home key\",\"seo_title_about\":\"about title\",\"seo_des_about\":\"about des\",\"seo_key_about\":\"about key\",\"seo_title_services\":\"services Title\",\"seo_des_services\":\"services des\",\"seo_key_services\":\"services key\",\"seo_title_blog\":\"blog title\",\"seo_des_blog\":\"blog des\",\"seo_key_blog\":\"blog key\",\"seo_title_case\":\"case title\",\"seo_des_case\":\"case des\",\"seo_key_case\":\"case key\",\"seo_title_contact\":\"contact title\",\"seo_des_contact\":\"contact des\",\"seo_key_contact\":\"contact key\",\"seo_title_search\":\"Search Title\",\"seo_des_search\":\"Search Des\",\"seo_key_search\":\"Search Key\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 01:50:20', '2024-08-28 01:50:20'),
+(471, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-28 01:50:20', '2024-08-28 01:50:20'),
+(472, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 01:52:36', '2024-08-28 01:52:36'),
+(473, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:05:13', '2024-08-28 02:05:13'),
+(474, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:07:11', '2024-08-28 02:07:11'),
+(475, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-28 02:07:24', '2024-08-28 02:07:24'),
+(476, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 02:07:30', '2024-08-28 02:07:30'),
+(477, 1, 'admin/auth/menu/22/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:08:29', '2024-08-28 02:08:29'),
+(478, 1, 'admin/auth/menu/22', 'PUT', '127.0.0.1', '{\"parent_id\":\"0\",\"search_terms\":null,\"title\":\"Header Update\",\"icon\":\"icon-file\",\"uri\":\"home-modifies\",\"roles\":[null],\"permission\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 02:08:42', '2024-08-28 02:08:42'),
+(479, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 02:08:42', '2024-08-28 02:08:42'),
+(480, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 02:08:45', '2024-08-28 02:08:45'),
+(481, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 02:15:37', '2024-08-28 02:15:37'),
+(482, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:15:41', '2024-08-28 02:15:41'),
+(483, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 02:16:10', '2024-08-28 02:16:10'),
+(484, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 02:16:38', '2024-08-28 02:16:38'),
+(485, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:16:41', '2024-08-28 02:16:41'),
+(486, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 02:16:49', '2024-08-28 02:16:49'),
+(487, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 02:18:20', '2024-08-28 02:18:20'),
+(488, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-28 02:23:23', '2024-08-28 02:23:23'),
+(489, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:23:30', '2024-08-28 02:23:30'),
+(490, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"Possimus velit sus\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 02:23:54', '2024-08-28 02:23:54'),
+(491, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-28 02:23:54', '2024-08-28 02:23:54'),
+(492, 1, 'admin/blogs/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:23:57', '2024-08-28 02:23:57'),
+(493, 1, 'admin/blogs/4', 'PUT', '127.0.0.1', '{\"category_id\":\"1\",\"search_terms\":null,\"title\":\"Labore sit iusto am\",\"slug\":\"labore-sit-iusto-am\",\"short_content\":\"Quaerat deleniti eum\",\"alt\":\"Expedita dolores lab\",\"url\":\"https:\\/\\/www.lecali.info\",\"description\":\"<p>ZXZXzxzXzxxzxzxzxz<a href=\\\"https:\\/\\/ahitechno.com\\/\\\">https:\\/\\/ahitechno.com\\/<\\/a><\\/p>\",\"seo_title\":\"Sint deserunt ut im\",\"seo_description\":\"Est alias id et vol\",\"seo_keyword\":\"Porro amet maxime q\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 02:24:05', '2024-08-28 02:24:05'),
+(494, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-28 02:24:06', '2024-08-28 02:24:06'),
+(495, 1, 'admin/blogs/3/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:24:08', '2024-08-28 02:24:08'),
+(496, 1, 'admin/blogs/3', 'PUT', '127.0.0.1', '{\"category_id\":\"1\",\"search_terms\":null,\"title\":\"Aut dignissimos sapi\",\"slug\":\"aut-dignissimos-sapi\",\"short_content\":\"Aut incidunt nesciu\",\"alt\":\"Omnis rem in rerum n\",\"url\":\"https:\\/\\/www.lucikitazam.org.uk\",\"description\":\"<p><em><strong>XasaSsSAs<\\/strong><\\/em><\\/p>\",\"seo_title\":\"Excepturi excepturi\",\"seo_description\":\"Eiusmod quisquam cul\",\"seo_keyword\":\"Velit illum quis a\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 02:24:13', '2024-08-28 02:24:13'),
+(497, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-28 02:24:14', '2024-08-28 02:24:14'),
+(498, 1, 'admin/blogs/2/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 02:24:16', '2024-08-28 02:24:16'),
+(499, 1, 'admin/blogs/2', 'PUT', '127.0.0.1', '{\"category_id\":\"5\",\"search_terms\":null,\"title\":\"Culpa harum aut dol\",\"slug\":\"culpa-harum-aut-dol\",\"short_content\":\"Impedit architecto\",\"alt\":\"Et impedit tempora\",\"url\":\"https:\\/\\/www.voc.tv\",\"description\":\"<p><strong>hello<\\/strong><\\/p>\",\"seo_title\":\"Commodi impedit eni\",\"seo_description\":\"Laborum Proident i\",\"seo_keyword\":\"Consectetur volupta\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 02:24:22', '2024-08-28 02:24:22'),
+(500, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-28 02:24:22', '2024-08-28 02:24:22'),
+(501, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 04:26:36', '2024-08-28 04:26:36'),
+(502, 1, 'admin/services/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 04:26:39', '2024-08-28 04:26:39'),
+(503, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-28 04:26:43', '2024-08-28 04:26:43'),
+(504, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-28 04:28:02', '2024-08-28 04:28:02'),
+(505, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 04:28:42', '2024-08-28 04:28:42'),
+(506, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"testimonial\",\"model_name\":\"App\\\\Models\\\\Testimonial\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\TestimonialController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"description\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"rating\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"url\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 04:30:31', '2024-08-28 04:30:31'),
+(507, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 04:30:34', '2024-08-28 04:30:34'),
+(508, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-28 04:31:41', '2024-08-28 04:31:41'),
+(509, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-28 04:31:42', '2024-08-28 04:31:42'),
+(510, 1, 'admin/testimonials', 'GET', '127.0.0.1', '[]', '2024-08-28 04:32:49', '2024-08-28 04:32:49'),
+(511, 1, 'admin/testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-28 04:32:51', '2024-08-28 04:32:51'),
+(512, 1, 'admin/testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-28 04:49:40', '2024-08-28 04:49:40'),
+(513, 1, 'admin/testimonials', 'POST', '127.0.0.1', '{\"name\":\"user1\",\"profaction\":\"profaction1\",\"description\":\"dis 1\",\"rating\":\"5\",\"alt\":null,\"url\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 04:50:20', '2024-08-28 04:50:20'),
+(514, 1, 'admin/testimonials', 'GET', '127.0.0.1', '[]', '2024-08-28 04:50:20', '2024-08-28 04:50:20'),
+(515, 1, 'admin/testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-28 04:50:23', '2024-08-28 04:50:23'),
+(516, 1, 'admin/testimonials', 'POST', '127.0.0.1', '{\"name\":\"user2\",\"profaction\":\"profaction2\",\"description\":\"dis 2\",\"rating\":\"4\",\"alt\":null,\"url\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 04:50:44', '2024-08-28 04:50:44'),
+(517, 1, 'admin/testimonials', 'GET', '127.0.0.1', '[]', '2024-08-28 04:50:44', '2024-08-28 04:50:44'),
+(518, 1, 'admin/testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-28 04:50:46', '2024-08-28 04:50:46'),
+(519, 1, 'admin/testimonials', 'POST', '127.0.0.1', '{\"name\":\"user3\",\"profaction\":\"profaction3\",\"description\":\"dis3\",\"rating\":\"2\",\"alt\":null,\"url\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 04:51:11', '2024-08-28 04:51:11');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(520, 1, 'admin/testimonials', 'GET', '127.0.0.1', '[]', '2024-08-28 04:51:11', '2024-08-28 04:51:11'),
+(521, 1, 'admin/testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 05:01:50', '2024-08-28 05:01:50'),
+(522, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 05:07:07', '2024-08-28 05:07:07'),
+(523, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"homebanner\",\"model_name\":\"App\\\\Models\\\\Homebanner\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\HomebannerController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"main_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"des\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"url\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"alt\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:08:33', '2024-08-28 05:08:33'),
+(524, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 05:08:34', '2024-08-28 05:08:34'),
+(525, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-28 05:08:52', '2024-08-28 05:08:52'),
+(526, 1, 'admin/homebanners', 'GET', '127.0.0.1', '[]', '2024-08-28 05:09:28', '2024-08-28 05:09:28'),
+(527, 1, 'admin/homebanners/create', 'GET', '127.0.0.1', '[]', '2024-08-28 05:09:29', '2024-08-28 05:09:29'),
+(528, 1, 'admin/homebanners/create', 'GET', '127.0.0.1', '[]', '2024-08-28 05:10:44', '2024-08-28 05:10:44'),
+(529, 1, 'admin/homebanners', 'POST', '127.0.0.1', '{\"title\":\"Title 1\",\"main_title\":\"Main Title 1\",\"des\":\"This is first description\",\"link\":null,\"url\":null,\"alt\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:12:01', '2024-08-28 05:12:01'),
+(530, 1, 'admin/homebanners/create', 'GET', '127.0.0.1', '[]', '2024-08-28 05:12:02', '2024-08-28 05:12:02'),
+(531, 1, 'admin/homebanners', 'POST', '127.0.0.1', '{\"title\":\"Title 1\",\"main_title\":\"Main Title 1\",\"des\":\"This is first description\",\"link\":null,\"url\":null,\"alt\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:12:39', '2024-08-28 05:12:39'),
+(532, 1, 'admin/homebanners', 'GET', '127.0.0.1', '[]', '2024-08-28 05:12:39', '2024-08-28 05:12:39'),
+(533, 1, 'admin/homebanners', 'GET', '127.0.0.1', '[]', '2024-08-28 05:13:35', '2024-08-28 05:13:35'),
+(534, 1, 'admin/homebanners/create', 'GET', '127.0.0.1', '[]', '2024-08-28 05:13:50', '2024-08-28 05:13:50'),
+(535, 1, 'admin/homebanners', 'POST', '127.0.0.1', '{\"title\":\"Title 2\",\"main_title\":\"Main  Title 2\",\"des\":\"Des 2\",\"link\":null,\"url\":null,\"alt\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:15:08', '2024-08-28 05:15:08'),
+(536, 1, 'admin/homebanners', 'GET', '127.0.0.1', '[]', '2024-08-28 05:15:08', '2024-08-28 05:15:08'),
+(537, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:19:34', '2024-08-28 05:19:34'),
+(538, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"search_terms\":null,\"title\":\"Home\",\"icon\":\"icon-archive\",\"uri\":null,\"roles\":[\"1\",null],\"permission\":\"*\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:19:57', '2024-08-28 05:19:57'),
+(539, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:19:57', '2024-08-28 05:19:57'),
+(540, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:20:00', '2024-08-28 05:20:00'),
+(541, 1, 'admin/auth/menu/27/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 05:20:30', '2024-08-28 05:20:30'),
+(542, 1, 'admin/auth/menu/27', 'PUT', '127.0.0.1', '{\"parent_id\":\"28\",\"search_terms\":null,\"title\":\"Homebanners\",\"icon\":\"icon-file\",\"uri\":\"homebanners\",\"roles\":[null],\"permission\":null,\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\",\"_method\":\"PUT\"}', '2024-08-28 05:20:36', '2024-08-28 05:20:36'),
+(543, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:20:36', '2024-08-28 05:20:36'),
+(544, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:20:37', '2024-08-28 05:20:37'),
+(545, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"_order\":\"[{\\\"id\\\":\\\"20\\\",\\\"children\\\":[{\\\"id\\\":\\\"15\\\"},{\\\"id\\\":\\\"14\\\"}]},{\\\"id\\\":\\\"21\\\",\\\"children\\\":[{\\\"id\\\":\\\"17\\\"},{\\\"id\\\":\\\"19\\\"}]},{\\\"id\\\":\\\"28\\\",\\\"children\\\":[{\\\"id\\\":\\\"27\\\"},{\\\"id\\\":\\\"25\\\"}]},{\\\"id\\\":\\\"1\\\"},{\\\"id\\\":\\\"2\\\",\\\"children\\\":[{\\\"id\\\":\\\"3\\\"},{\\\"id\\\":\\\"4\\\"},{\\\"id\\\":\\\"5\\\"},{\\\"id\\\":\\\"6\\\"},{\\\"id\\\":\\\"7\\\"}]},{\\\"id\\\":\\\"8\\\",\\\"children\\\":[{\\\"id\\\":\\\"9\\\"},{\\\"id\\\":\\\"10\\\"},{\\\"id\\\":\\\"11\\\"},{\\\"id\\\":\\\"12\\\"}]},{\\\"id\\\":\\\"13\\\"},{\\\"id\\\":\\\"16\\\"},{\\\"id\\\":\\\"22\\\"},{\\\"id\\\":\\\"23\\\"},{\\\"id\\\":\\\"24\\\"},{\\\"id\\\":\\\"26\\\"}]\",\"_token\":\"li02LHCVWnbl6zb9LaTbAkfejog3s0QIwtUch4xY\"}', '2024-08-28 05:20:57', '2024-08-28 05:20:57'),
+(546, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:20:58', '2024-08-28 05:20:58'),
+(547, 1, 'admin/home-modifies', 'GET', '127.0.0.1', '[]', '2024-08-28 05:21:02', '2024-08-28 05:21:02'),
+(548, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:21:04', '2024-08-28 05:21:04'),
+(549, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:21:13', '2024-08-28 05:21:13'),
+(550, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-28 05:21:22', '2024-08-28 05:21:22'),
+(551, 1, 'admin/quotes', 'GET', '127.0.0.1', '[]', '2024-08-28 05:21:27', '2024-08-28 05:21:27');
 
 -- --------------------------------------------------------
 
@@ -487,7 +717,8 @@ CREATE TABLE `admin_role_menu` (
 INSERT INTO `admin_role_menu` (`role_id`, `menu_id`, `created_at`, `updated_at`) VALUES
 (1, 2, NULL, NULL),
 (1, 20, NULL, NULL),
-(1, 21, NULL, NULL);
+(1, 21, NULL, NULL),
+(1, 28, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -551,7 +782,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `username`, `password`, `name`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9/mIiQPyhPsWi7gC', 'Administrators', NULL, NULL, '2024-05-01 00:07:00', '2024-05-02 23:47:17');
+(1, 'admin', '$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9/mIiQPyhPsWi7gC', 'Administrators', 'images/Heaven\'s Lost Property_1.jpg', NULL, '2024-05-01 00:07:00', '2024-08-26 01:24:16');
 
 -- --------------------------------------------------------
 
@@ -579,6 +810,7 @@ CREATE TABLE `blogs` (
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `short_content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `home_image` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -596,11 +828,11 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `created_at`, `updated_at`) VALUES
-(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, '2024-05-02 02:24:52', '2024-05-03 06:13:05'),
-(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, '2024-05-02 03:38:48', '2024-05-03 06:12:50'),
-(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, '2024-05-02 03:39:27', '2024-05-03 06:12:40'),
-(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, '2024-05-02 04:05:07', '2024-05-03 06:12:30');
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `home_image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `created_at`, `updated_at`) VALUES
+(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'images/bg-breadcrumb_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, '2024-05-02 02:24:52', '2024-08-28 02:24:22'),
+(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'images/inner-banner_1.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, '2024-05-02 03:38:48', '2024-08-28 02:24:14'),
+(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'images/banner-img.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, '2024-05-02 03:39:27', '2024-08-28 02:24:05'),
+(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 'images/blog-details.jpg', 'images/banner1_1.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, '2024-05-02 04:05:07', '2024-08-28 02:23:54');
 
 -- --------------------------------------------------------
 
@@ -642,6 +874,7 @@ CREATE TABLE `contact` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `project` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `company` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `company_website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -655,8 +888,9 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `name`, `email`, `phone`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
-(16, 'ClarkSchwartz', 'xuqowenu@mailinator.com', '+13526236307', 'Larson and Kidd Trading', 'Pacheco and George LLC', 'How can we help?', 'What\'s your ideal budget?', 'Voluptatibus non Nam', '2024-05-02 01:24:29', '2024-05-02 01:24:29');
+INSERT INTO `contact` (`id`, `name`, `email`, `phone`, `project`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
+(18, 'user', 'user@gmail.com', '1234567898', 'UX project', NULL, NULL, 'UX Designing', NULL, 'hello this is testing purpose not for live', '2024-08-27 07:18:16', '2024-08-27 07:20:07'),
+(19, 'HanaeCooley', 'renasedypu@mailinator.com', '+15427564727', 'Sunt dolor assumenda', NULL, NULL, 'Sunt atque blanditii', NULL, 'Quia enim laboris do', '2024-08-28 04:27:45', '2024-08-28 04:27:45');
 
 -- --------------------------------------------------------
 
@@ -673,6 +907,85 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home`
+--
+
+CREATE TABLE `home` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagrame` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_no` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `whatapp` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `call_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `call_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `home`
+--
+
+INSERT INTO `home` (`id`, `email`, `facebook`, `twitter`, `instagrame`, `linkedin`, `phone_no`, `whatapp`, `address`, `call_1`, `call_2`, `created_at`, `updated_at`) VALUES
+(1, 'admin@admin.com', 'https://www.facebook.com/', 'https://x.com/?lang=en', 'https://www.instagram.com/', 'https://www.linkedin.com/', '08306449106', '1234556788', '100 nand vatika , Kund road,jai singh pura ,Khor', NULL, NULL, '2024-08-27 00:20:13', '2024-08-27 00:28:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `homebanner`
+--
+
+CREATE TABLE `homebanner` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `main_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `des` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `homebanner`
+--
+
+INSERT INTO `homebanner` (`id`, `title`, `main_title`, `des`, `link`, `image`, `url`, `alt`, `created_at`, `updated_at`) VALUES
+(1, 'Title 1', 'Main Title 1', 'This is first description', NULL, 'images/https___codepin.org__uploads_images_blog-details.jpg', NULL, NULL, '2024-08-28 05:12:39', '2024-08-28 05:12:39'),
+(2, 'Title 2', 'Main  Title 2', 'Des 2', NULL, 'images/aboutimg1.png', NULL, NULL, '2024-08-28 05:15:08', '2024-08-28 05:15:08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `homefaq`
+--
+
+CREATE TABLE `homefaq` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `homefaq`
+--
+
+INSERT INTO `homefaq` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALUES
+(1, 'Question1', 'Answer1', '2024-08-28 00:07:21', '2024-08-28 00:07:21'),
+(2, 'Question2', 'Answer2', '2024-08-28 00:08:09', '2024-08-28 00:08:09'),
+(3, 'Question3', 'Answer3', '2024-08-28 00:08:23', '2024-08-28 00:08:23');
 
 -- --------------------------------------------------------
 
@@ -701,7 +1014,38 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2024_05_02_074754_create_blogs_table', 4),
 (9, '2024_05_02_115501_create_title_table', 5),
 (10, '2024_05_02_131737_create_service_category_table', 6),
-(11, '2024_05_03_054737_create_services_table', 7);
+(11, '2024_05_03_054737_create_services_table', 7),
+(12, '2024_08_27_053239_create_home_table', 8),
+(13, '2024_08_27_061517_create_navbar_table', 9),
+(14, '2024_08_28_045632_create_quote_table', 10),
+(15, '2024_08_28_053555_create_homefaq_table', 11),
+(16, '2024_08_28_100031_create_testimonial_table', 12),
+(17, '2024_08_28_103833_create_homebanner_table', 13);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `navbar`
+--
+
+CREATE TABLE `navbar` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `navbar`
+--
+
+INSERT INTO `navbar` (`id`, `title`, `stug`, `created_at`, `updated_at`) VALUES
+(1, 'Home', '/', '2024-08-27 00:46:34', '2024-08-27 00:46:34'),
+(2, 'About', 'about', '2024-08-27 00:47:04', '2024-08-27 00:47:04'),
+(3, 'Services', 'services', '2024-08-27 00:47:42', '2024-08-27 00:47:42'),
+(4, 'Blog', 'blogs', '2024-08-27 00:48:11', '2024-08-27 00:48:11'),
+(5, 'Contact', 'contact', '2024-08-27 00:48:42', '2024-08-27 00:48:42');
 
 -- --------------------------------------------------------
 
@@ -733,6 +1077,31 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quote`
+--
+
+CREATE TABLE `quote` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `fname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `quote`
+--
+
+INSERT INTO `quote` (`id`, `fname`, `lname`, `email`, `message`, `created_at`, `updated_at`) VALUES
+(1, 'User', 'lastUser', 'User@gmail.com', 'This is only testing purposes', '2024-08-27 23:38:32', '2024-08-27 23:38:32'),
+(2, 'test', 'test', 'test@gmail.com', 'this is only testing', '2024-08-27 23:44:15', '2024-08-27 23:44:15'),
+(3, 'kaushik', 'Dey', 'admin@admin.com', 'xxzczcxzczxc', '2024-08-28 01:12:39', '2024-08-28 01:12:39');
 
 -- --------------------------------------------------------
 
@@ -771,7 +1140,7 @@ INSERT INTO `services` (`id`, `service_category_id`, `title`, `slug`, `short_con
 (3, '5', 'Esse quaerat eveniet', 'esse-quaerat-eveniet', 'Fugiat non totam ci', 'images/e-commerce-details.jpg', 'images/ecom.png', 'Non recusandae Ea a', 'https://www.qaronyzewaxo.me.uk', '<p>asdsadsdsdsadasdsd</p>', 'Obcaecati aliqua Qu', 'Reiciendis voluptas', 'Enim hic laborum Eu', 'Rerum exercitation a', 'Nam omnis perferendi', 1, '2024-05-03 01:04:21', '2024-05-03 01:04:21'),
 (4, '6', 'Consequatur volupta', 'consequatur-volupta', 'Voluptatibus dolorem', 'images/website-details.jpg', 'images/web-development.png', 'Ut consectetur et q', 'https://www.lypomonogyn.cc', '<p>asdsadas asdd asd&nbsp; a ds dsad adsads akjkja la kjlal s sa</p>', 'Dolor sunt aliquip a', 'Nulla ut qui pariatu', 'Quo porro quae recus', 'Quod quia cupidatat', 'Animi necessitatibu', 1, '2024-05-03 01:05:10', '2024-05-03 01:05:10'),
 (5, '7', 'Eos eveniet tempore', 'eos-eveniet-tempore', 'Doloribus reprehende', 'images/e-commerce-details_1.jpg', 'images/app-dev.png', 'Accusamus et iure ut', 'https://www.zijojocupe.cm', '<p><strong>&nbsp;App design&nbsp;</strong></p>', 'Aut id officiis und', 'Perferendis corrupti', 'Dolor delectus natu', 'Sit est voluptate a', 'Ipsa non placeat p', 1, '2024-05-03 01:07:16', '2024-05-03 01:07:16'),
-(6, '8', 'Laborum Laboris sun', 'laborum-laboris-sun', 'Omnis voluptatem pla', 'images/digital-marketing-details.jpg', 'images/custom-soft.png', 'Est voluptate verita', 'https://www.mynycumyc.co.uk', '<p><strong>Custom Software</strong></p>', 'Est molestias totam', 'Quisquam reprehender', 'Cupiditate modi expe', 'Non et minus adipisc', 'Eaque velit unde do', 1, '2024-05-03 01:08:27', '2024-05-03 01:08:27');
+(6, '8', 'Laborum Laboris sun', 'laborum-laboris-sun', 'Omnis voluptatem pla', 'images/banner2.jpg', 'images/custom-soft.png', 'Est voluptate verita', 'https://www.mynycumyc.co.uk', '<p><strong>Custom Software</strong></p>', 'Est molestias totam', 'Quisquam reprehender', 'Cupiditate modi expe', 'Non et minus adipisc', 'Eaque velit unde do', 1, '2024-05-03 01:08:27', '2024-08-27 01:26:51');
 
 -- --------------------------------------------------------
 
@@ -805,6 +1174,34 @@ INSERT INTO `service_category` (`id`, `name`, `slug`, `seo_title`, `seo_des`, `s
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `testimonial`
+--
+
+CREATE TABLE `testimonial` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `profaction` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rating` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `testimonial`
+--
+
+INSERT INTO `testimonial` (`id`, `name`, `description`, `profaction`, `rating`, `image`, `alt`, `url`, `created_at`, `updated_at`) VALUES
+(1, 'user1', 'dis 1', 'profaction1', '5', 'images/team-1.jpg', NULL, NULL, '2024-08-28 04:50:20', '2024-08-28 04:50:20'),
+(2, 'user2', 'dis 2', 'profaction2', '4', 'images/team-4.jpg', NULL, NULL, '2024-08-28 04:50:44', '2024-08-28 04:50:44'),
+(3, 'user3', 'dis3', 'profaction3', '2', 'images/team-2.jpg', NULL, NULL, '2024-08-28 04:51:11', '2024-08-28 04:51:11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `title`
 --
 
@@ -816,18 +1213,22 @@ CREATE TABLE `title` (
   `seo_title_about` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_about` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_about` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_about` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title_services` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_services` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_services` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_services` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title_blog` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_blog` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_blog` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_blog` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title_case` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_case` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_case` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title_contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_contact` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title_search` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_search` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_search` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -839,8 +1240,8 @@ CREATE TABLE `title` (
 -- Dumping data for table `title`
 --
 
-INSERT INTO `title` (`id`, `seo_title_home`, `seo_des_home`, `seo_key_home`, `seo_title_about`, `seo_des_about`, `seo_key_about`, `seo_title_services`, `seo_des_services`, `seo_key_services`, `seo_title_blog`, `seo_des_blog`, `seo_key_blog`, `seo_title_case`, `seo_des_case`, `seo_key_case`, `seo_title_contact`, `seo_des_contact`, `seo_key_contact`, `seo_title_search`, `seo_des_search`, `seo_key_search`, `created_at`, `updated_at`) VALUES
-(1, 'home title', 'home des', 'home key', 'about title', 'about des', 'about key', 'services Title', 'services des', 'services key', 'blog title', 'blog des', 'blog key', 'case title', 'case des', 'case key', 'contact title', 'contact des', 'contact key', 'Search Title', 'Search Des', 'Search Key', '2024-05-02 06:39:39', '2024-05-02 07:17:53');
+INSERT INTO `title` (`id`, `seo_title_home`, `seo_des_home`, `seo_key_home`, `seo_title_about`, `seo_des_about`, `seo_key_about`, `image_about`, `seo_title_services`, `seo_des_services`, `seo_key_services`, `image_services`, `seo_title_blog`, `seo_des_blog`, `seo_key_blog`, `image_blog`, `seo_title_case`, `seo_des_case`, `seo_key_case`, `seo_title_contact`, `seo_des_contact`, `seo_key_contact`, `image_contact`, `seo_title_search`, `seo_des_search`, `seo_key_search`, `created_at`, `updated_at`) VALUES
+(1, 'home title', 'home des', 'home key', 'about title', 'about des', 'about key', 'images/banner1.jpg', 'services Title', 'services des', 'services key', 'images/banner2_1.jpg', 'blog title', 'blog des', 'blog key', 'images/inner-banner.jpg', 'case title', 'case des', 'case key', 'contact title', 'contact des', 'contact key', 'images/bg-breadcrumb.jpg', 'Search Title', 'Search Des', 'Search Key', '2024-05-02 06:39:39', '2024-08-28 01:50:20');
 
 -- --------------------------------------------------------
 
@@ -949,9 +1350,33 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `home`
+--
+ALTER TABLE `home`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `homebanner`
+--
+ALTER TABLE `homebanner`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `homefaq`
+--
+ALTER TABLE `homefaq`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `navbar`
+--
+ALTER TABLE `navbar`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -969,6 +1394,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `quote`
+--
+ALTER TABLE `quote`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `services`
 --
 ALTER TABLE `services`
@@ -978,6 +1409,12 @@ ALTER TABLE `services`
 -- Indexes for table `service_category`
 --
 ALTER TABLE `service_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonial`
+--
+ALTER TABLE `testimonial`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1001,13 +1438,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=330;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=552;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1043,7 +1480,7 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1052,16 +1489,46 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `home`
+--
+ALTER TABLE `home`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `homebanner`
+--
+ALTER TABLE `homebanner`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `homefaq`
+--
+ALTER TABLE `homefaq`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `navbar`
+--
+ALTER TABLE `navbar`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `quote`
+--
+ALTER TABLE `quote`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -1074,6 +1541,12 @@ ALTER TABLE `services`
 --
 ALTER TABLE `service_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `testimonial`
+--
+ALTER TABLE `testimonial`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `title`
