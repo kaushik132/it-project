@@ -31,8 +31,8 @@ class ServiceController extends AdminController
         $grid->column('title', __('Title'));
         $grid->column('slug', __('Slug'));
         $grid->column('short_content', __('Short content'));
-        $grid->column('image', __('Image'))->image(url('/uploads/'),100,150);
-        $grid->column('home_image', __('Home image'))->image(url('/uploads/'),100,150);
+        $grid->column('image', __('Home Image'))->image(url('/uploads/'),100,150);
+        $grid->column('home_image', __('Banner'))->image(url('/uploads/'),100,150);
        
 
         return $grid;
@@ -88,8 +88,8 @@ class ServiceController extends AdminController
 
 
         $form->textarea('short_content', __('Short content'));
-        $form->image('image', __('Image'));
-        $form->image('home_image', __('Home image'));
+        $form->image('home_image', __('Banner'));
+        $form->image('image', __('Home Image'));
         $form->text('alt', __('Alt'));
         $form->url('url', __('Url'));
         $form->ckeditor('description', __('Description'));

@@ -39,12 +39,7 @@
     @endforeach
 
 
-    <url>
-        <loc>https://codepin.org/casestudies</loc>
-        <lastmod>2024-05-02T07:54:52+00:00</lastmod>
-        <changefreq>Weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+   
 
     <url>
         <loc>https://codepin.org/contact</loc>

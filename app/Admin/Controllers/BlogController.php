@@ -31,7 +31,8 @@ class BlogController extends AdminController
         $grid->column('title', __('Title'));
         $grid->column('slug', __('Slug'));
         $grid->column('short_content', __('Short content'));
-        $grid->column('image', __('Image'))->image(url('/uploads/'), 100, 150);
+        $grid->column('image', __('Home Image'))->image(url('/uploads/'), 100, 150);
+        $grid->column('home_image', __('Banner'))->image(url('/uploads/'), 100, 150);
     
        
         
@@ -87,7 +88,8 @@ class BlogController extends AdminController
            $form->slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-',trim($form->title)));
         });
         $form->textarea('short_content', __('Short content'));
-        $form->image('image', __('Image'))->removable();
+        $form->image('image', __('Home Image'))->removable();
+        $form->image('home_image', __('Banner'))->removable();
         $form->text('alt', __('Alt'));
         $form->url('url', __('Url'));
         $form->ckeditor('description', __('Description'));
