@@ -129,7 +129,7 @@
         <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light"> 
-                    <a href="#" class="navbar-brand p-0">
+                    <a href="{{route('index')}}" class="navbar-brand p-0">
                         <img src="https://st3.depositphotos.com/43745012/44906/i/450/depositphotos_449066958-stock-photo-financial-accounting-logo-financial-logo.jpg" alt="Logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
