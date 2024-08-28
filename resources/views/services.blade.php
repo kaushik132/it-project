@@ -58,7 +58,7 @@
          
                  
                  <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                     <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Services</a>
+                     <a class="btn btn-primary rounded-pill py-3 px-5" href="{{route('services')}}">More Services</a>
                  </div>
              </div>
          </div>

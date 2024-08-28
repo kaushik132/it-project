@@ -60,8 +60,8 @@ class BlogController extends AdminController
         $show->field('seo_title', __('Seo title'));
         $show->field('seo_description', __('Seo description'));
         $show->field('seo_keyword', __('Seo keyword'));
-        $show->field('question', __('Question'));
-        $show->field('answer', __('Answer'));
+        // $show->field('question', __('Question'));
+        // $show->field('answer', __('Answer'));
         $show->field('status', __('Status'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -94,8 +94,8 @@ class BlogController extends AdminController
         $form->textarea('seo_title', __('Seo title'));
         $form->textarea('seo_description', __('Seo description'));
         $form->textarea('seo_keyword', __('Seo keyword'));
-        $form->text('question', __('Question'));
-        $form->text('answer', __('Answer'));
+        // $form->text('question', __('Question'));
+        // $form->text('answer', __('Answer'));
  
 
         return $form;

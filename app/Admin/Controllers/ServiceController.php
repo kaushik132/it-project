@@ -96,8 +96,8 @@ class ServiceController extends AdminController
         $form->textarea('seo_title', __('Seo title'));
         $form->textarea('seo_description', __('Seo description'));
         $form->textarea('seo_keyword', __('Seo keyword'));
-        $form->text('question', __('Question'));
-        $form->text('answer', __('Answer'));
+        // $form->text('question', __('Question'));
+        // $form->text('answer', __('Answer'));
        
 
         return $form;
