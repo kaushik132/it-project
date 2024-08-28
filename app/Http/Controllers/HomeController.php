@@ -12,6 +12,7 @@ use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Quote;
 use App\Models\Homefaq;
+use App\Models\Navbar;
 
 use App\Models\HomeModify;
 
@@ -39,13 +40,15 @@ class HomeController extends Controller
         $seo_data['seo_title'] = $homepage->seo_title_about;
         $seo_data['seo_description'] = $homepage->seo_des_about;
         $seo_data['keywords'] = $homepage->seo_key_about;
+        $banner['banner'] = $homepage->image_about;
         $canocial ='https://codepin.org/about';
-        return view('about',compact('seo_data','canocial'));
+
+        return view('about',compact('seo_data','canocial','banner'));
     }
 
     public function services($slug=null)
     {
-        $homepage = Title::select('seo_title_services','seo_des_services','seo_key_services')->first();
+        $homepage = Title::select('seo_title_services','seo_des_services','seo_key_services','image_services')->first();
         if($slug!=null){
             $servicesCategory = ServiceCategory::where('slug',$slug)->first();
             $servicesList = Service::latest()->with('serviceCategory')->where('category_id',$servicesCategory->id)->paginate(6);
@@ -61,10 +64,11 @@ class HomeController extends Controller
             $seo_data['seo_title'] =$homepage->seo_title_services;
             $seo_data['seo_description'] =$homepage->seo_des_services;
             $seo_data['keywords'] =$homepage->seo_key_services;
+            $banner['banner'] = $homepage->image_services;
             $canocial ='https://codepin.org/services';
          
          }
-        return view('services',compact('seo_data','servicesList','canocial'));
+        return view('services',compact('seo_data','servicesList','canocial','banner'));
     }
 
     public function servicesDetails($slug=null)
@@ -80,7 +84,7 @@ class HomeController extends Controller
 
     public function blogs($slug=null)
     {
-        $homepage = Title::select('seo_title_blog','seo_des_blog','seo_key_blog')->first();
+        $homepage = Title::select('seo_title_blog','seo_des_blog','seo_key_blog','image_blog')->first();
         $title = 'All blog Page';
         if($slug!=null){
             $blogCategory = BlogCategory::where('slug',$slug)->first();
@@ -97,10 +101,11 @@ class HomeController extends Controller
             $seo_data['seo_title'] =$homepage->seo_title_blog;
             $seo_data['seo_description'] =$homepage->seo_des_blog;
             $seo_data['keywords'] =$homepage->seo_key_blog;
+            $banner['banner'] = $homepage->image_blog;
             $canocial ='https://codepin.org/blogs';
          
          }
-        return view('blogs',compact('title','blogList','seo_data','canocial'));
+        return view('blogs',compact('title','blogList','seo_data','canocial','banner'));
     }
 
     public function blogDetails($slug=null)
@@ -141,8 +146,9 @@ class HomeController extends Controller
         $seo_data['seo_title'] = $homepage->seo_title_contact;
         $seo_data['seo_description'] = $homepage->seo_des_contact;
         $seo_data['keywords'] = $homepage->seo_key_contact;
+        $banner['banner'] = $homepage->image_contact;
         $canocial = 'https://codepin.org/contact';
-        return view('contact',compact('seo_data','canocial','homeData'));
+        return view('contact',compact('seo_data','canocial','homeData','banner'));
     }
 
     public function contactPost(Request $request)    

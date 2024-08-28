@@ -2,7 +2,7 @@
 @section('main-containers')
 
         <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
+        <div class="container-fluid bg-breadcrumb" style="background-image: url(../uploads/{{$banner['banner']}})">
          <div class="container text-md-start text-center py-5">
              <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">About Us</h4>
              <ol class="breadcrumb d-flex mb-0 wow fadeInDown" data-wow-delay="0.3s">
