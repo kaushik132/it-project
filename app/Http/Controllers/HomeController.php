@@ -12,7 +12,9 @@ use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Quote;
 use App\Models\Homefaq;
-use App\Models\Navbar;
+use App\Models\Testimonial;
+use App\Models\Homebanner;
+
 
 use App\Models\HomeModify;
 
@@ -23,6 +25,8 @@ class HomeController extends Controller
 
     public function index() 
     {
+        $testimonial = Testimonial::all();
+        $homebanner = Homebanner::all();
         $faq = Homefaq::all();
         $bloglist = Blog::latest()->limit(3)->get();
         $servicelist = Service::latest()->limit(4)->get();
@@ -31,7 +35,7 @@ class HomeController extends Controller
         $seo_data['seo_description'] = $homepage->seo_des_home;
         $seo_data['keywords'] = $homepage->seo_key_home;
         $canocial ='https://codepin.org';
-        return view('home',compact('seo_data','servicelist','canocial','bloglist','faq'));
+        return view('home',compact('seo_data','servicelist','canocial','bloglist','faq','testimonial','homebanner'));
     }
 
     public function about()
@@ -51,10 +55,11 @@ class HomeController extends Controller
         $homepage = Title::select('seo_title_services','seo_des_services','seo_key_services','image_services')->first();
         if($slug!=null){
             $servicesCategory = ServiceCategory::where('slug',$slug)->first();
-            $servicesList = Service::latest()->with('serviceCategory')->where('category_id',$servicesCategory->id)->paginate(6);
+            $servicesList = Service::latest()->with('serviceCategory')->where('service_category_id',$servicesCategory->id)->paginate(6);
             $seo_data['seo_title'] =$servicesCategory->seo_title;
             $seo_data['seo_description'] =$servicesCategory->seo_description;
            $seo_data['keywords'] =$servicesCategory->seo_keyword;
+           $banner['banner'] = 'https://img.freepik.com/premium-vector/picture-people-working-computer-with-man-working-computer_1135235-237.jpg?w=740';
            $canocial ='https://codepin.org/services/'.$slug;
 
          
@@ -73,13 +78,15 @@ class HomeController extends Controller
 
     public function servicesDetails($slug=null)
     {
-        $servicelist = Service::latest()->limit(6)->get();
+        $testimonial = Testimonial::all();
+        $servicedetails = ServiceCategory::withcount('services')->get();
+        $servicelist = Service::latest()->limit(4)->get();
         $servicesData = Service::with('serviceCategory')->where('slug',$slug)->first();
         $seo_data['seo_title'] =$servicesData->seo_title;
         $seo_data['seo_description'] =$servicesData->seo_description;
        $seo_data['keywords'] =$servicesData->seo_keyword;
        $canocial ='https://codepin.org/service-details/'.$slug;
-        return view('service-details',compact('seo_data','servicesData','servicelist','canocial'));
+        return view('service-details',compact('seo_data','servicesData','servicelist','canocial','servicedetails','testimonial'));
     }
 
     public function blogs($slug=null)
@@ -92,6 +99,7 @@ class HomeController extends Controller
             $seo_data['seo_title'] =$blogCategory->seo_title;
             $seo_data['seo_description'] =$blogCategory->seo_description;
            $seo_data['keywords'] =$blogCategory->seo_keyword;
+           $banner['banner'] = 'https://img.freepik.com/premium-vector/picture-people-working-computer-with-man-working-computer_1135235-237.jpg?w=740';
            $canocial ='https://codepin.org/blogs/'.$slug;
 
          
@@ -105,7 +113,7 @@ class HomeController extends Controller
             $canocial ='https://codepin.org/blogs';
          
          }
-        return view('blogs',compact('title','blogList','seo_data','canocial','banner'));
+        return view('blogs',compact('title','blogList','banner','seo_data','canocial',));
     }
 
     public function blogDetails($slug=null)

@@ -149,11 +149,8 @@
                         </div>
                     </div>
                     <div class="d-none d-xl-flex flex-shrink-0 ps-4">
-                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
-                            <i class="fa fa-phone-alt fa-2x"></i>
-                            <div class="position-absolute" style="top: 7px; right: 12px;">
-                                <span><i class="fa fa-comment-dots"></i></span>
-                            </div>
+                        <a href="https://api.whatsapp.com/send?phone={{ $homeData->phone_no ?? '' }}" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="bi bi-whatsapp fa-2x"></i>
                         </a>
                         <div class="d-flex flex-column ms-3">
                             <span>Call to Our Experts</span>

@@ -8,55 +8,35 @@
 
 <!-- Carousel Start -->
 <div class="header-carousel owl-carousel">
+    @foreach ($homebanner as $homebanner)
+        
+
     <div class="header-carousel-item bg-primary">
         <div class="carousel-caption">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-7 animated fadeInLeft">
                         <div class="text-sm-center text-md-start">
-                            <h4 class="text-white text-uppercase fw-bold mb-4">Lorem, ipsum dolor.</h4>
-                            <h1 class="display-1 text-white mb-4">Lorem ipsum dolor sit amet.</h1>
-                            <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
+                            <h4 class="text-white text-uppercase fw-bold mb-4">{{$homebanner->title}}</h4>
+                            <h1 class="display-1 text-white mb-4">{{$homebanner->main_title}}</h1>
+                            <p class="mb-5 fs-5">{{$homebanner->des}} 
                             </p>
                             <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                <a class="btn btn-outline-light rounded-pill py-3 px-4 px-md-5 ms-2" href="service-detail.html">Learn More</a>
+                                <a class="btn btn-outline-light rounded-pill py-3 px-4 px-md-5 ms-2" href="{{$homebanner->link}}">Learn More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 animated fadeInRight">
                         <div class="calrousel-img" style="object-fit: cover;">
-                            <img src="https://img.freepik.com/free-vector/hosting-services-concept_1284-19430.jpg?t=st=1724652416~exp=1724656016~hmac=dc01a68b477b908185cb94e87a38189936f922004a1e6929ca773ee698e777e0&w=740" class="img-fluid w-100" alt="">
+                            <img src="{{url('uploads/'.$homebanner->image)}}" class="img-fluid w-100" alt="{{$homebanner->alt}}">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="header-carousel-item bg-primary">
-        <div class="carousel-caption">
-            <div class="container">
-                <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
-                    <div class="col-lg-5 animated fadeInLeft">
-                        <div class="calrousel-img">
-                            <img src="https://img.freepik.com/free-vector/illustration-social-media-concept_53876-18377.jpg?t=st=1724652550~exp=1724656150~hmac=c217e15fd74eb4f90f46463b54899f011158ec06179d192acd52ea6bd56f6920&w=740" class="img-fluid w-100" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 animated fadeInRight">
-                        <div class="text-sm-center text-md-end">
-                            <h4 class="text-white text-uppercase fw-bold mb-4">Lorem, ipsum dolor.</h4>
-                            <h1 class="display-1 text-white mb-4">Lorem ipsum dolor sit amet.</h1>
-                            <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
-                            </p>
-                            <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                               
-                                <a class="btn btn-outline-light rounded-pill py-3 px-4 px-md-5 ms-2" href="service-detail.html">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
+    
 </div>
 <!-- Carousel End -->
 
@@ -320,78 +300,38 @@
             </p>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
+          
+            @foreach ($testimonial as $testimonial)
+                
+            
             <div class="testimonial-item bg-light rounded">
                 <div class="row g-0">
                     <div class="col-4  col-lg-4 col-xl-3">
                         <div class="h-100">
-                            <img src="img/testimonial-1.jpg" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                            <img src="{{url('uploads/'.$testimonial->image)}}" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="{{$testimonial->alt}}">
                         </div>
                     </div>
                     <div class="col-8 col-lg-8 col-xl-9">
                         <div class="d-flex flex-column my-auto text-start p-4">
-                            <h4 class="text-dark mb-0">Client Name</h4>
-                            <p class="mb-3">Profession</p>
+                            <h4 class="text-dark mb-0">{{$testimonial->name}}</h4>
+                            <p class="mb-3">{{$testimonial->profaction}}</p>
                             <div class="d-flex text-primary mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                @for ($i = 1; $i <= 5; $i++)
+                                    @if ($i <= $testimonial->rating)
+                                        <i class="fas fa-star"></i>
+                                    @else
+                                        <i class="fas fa-star text-body"></i>
+                                    @endif
+                                @endfor
                             </div>
-                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim error molestiae aut modi corrupti fugit eaque rem nulla incidunt temporibus quisquam,
+                            <p class="mb-0">{{$testimonial->description}}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-item bg-light rounded">
-                <div class="row g-0">
-                    <div class="col-4  col-lg-4 col-xl-3">
-                        <div class="h-100">
-                            <img src="img/testimonial-2.jpg" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                        </div>
-                    </div>
-                    <div class="col-8 col-lg-8 col-xl-9">
-                        <div class="d-flex flex-column my-auto text-start p-4">
-                            <h4 class="text-dark mb-0">Client Name</h4>
-                            <p class="mb-3">Profession</p>
-                            <div class="d-flex text-primary mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim error molestiae aut modi corrupti fugit eaque rem nulla incidunt temporibus quisquam,
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-light rounded">
-                <div class="row g-0">
-                    <div class="col-4  col-lg-4 col-xl-3">
-                        <div class="h-100">
-                            <img src="img/testimonial-3.jpg" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                        </div>
-                    </div>
-                    <div class="col-8 col-lg-8 col-xl-9">
-                        <div class="d-flex flex-column my-auto text-start p-4">
-                            <h4 class="text-dark mb-0">Client Name</h4>
-                            <p class="mb-3">Profession</p>
-                            <div class="d-flex text-primary mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                            <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim error molestiae aut modi corrupti fugit eaque rem nulla incidunt temporibus quisquam,
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+    
         </div>
     </div>
 </div>

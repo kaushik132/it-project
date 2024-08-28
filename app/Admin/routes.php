@@ -22,6 +22,8 @@ Route::group([
     $router->resource('navbars', NavbarController::class);
     $router->resource('quotes', QuoteController::class);
     $router->resource('homefaqs', HomeFaqController::class);
+    $router->resource('testimonials', TestimonialController::class);
+    $router->resource('homebanners', HomebannerController::class);
 
 
 

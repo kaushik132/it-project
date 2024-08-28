@@ -43,7 +43,7 @@ $date = Carbon::parse($blogData->created_at)->format('d M, Y');
             <div class="cate-blog-border mt-3">
          @foreach ($blogCategory as $blogCategory)
              
-         <a href="#"><div class="mt-3 d-flex justify-content-between">
+         <a href="{{url('blogs/'.$blogCategory->slug)}}"><div class="mt-3 d-flex justify-content-between">
              <h6>{{$blogCategory->name}}</h6>
              <h6>{{$blogCategory->blogs_count}}</h6>
            </div>
