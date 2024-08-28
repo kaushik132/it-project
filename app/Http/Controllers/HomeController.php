@@ -10,6 +10,7 @@ use App\Models\BlogCategory;
 use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\Quote;
 
 use App\Models\HomeModify;
 
@@ -180,6 +181,42 @@ class HomeController extends Controller
   $contact_obj->save();
  
   return back()->with('message', 'Form Submitted Successfully!');
+    }
+
+
+
+
+
+
+    public function quotePost(Request $request)    
+    {
+        $this->validate(request(), [
+            'fname' => "required",
+            'lname' => "required",
+            'email' => "required",         
+            'message' => "required",
+         
+          ], [], 
+        [
+          'fname' => 'First Name',
+          'lname' => 'Last Name',
+          'email' => 'Email',
+            'message' => "Message",
+          
+         
+        ]);
+
+        
+  $contact_obj = new Quote;
+  $contact_obj->fname   =$request->fname;
+  $contact_obj->lname   =$request->lname;
+  $contact_obj->email  =$request->email;
+
+
+  $contact_obj->message=$request->message;
+  $contact_obj->save();
+ 
+  return back()->with('message', 'Form submitted successfully!');
     }
 
 

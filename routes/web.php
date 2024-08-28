@@ -32,6 +32,7 @@ Route::get('/blog-details/{slug?}',[HomeController::class, 'blogDetails'])->name
 Route::get('/casestudies',[HomeController::class, 'casestudies'])->name('casestudies');
 Route::get('/contact',[HomeController::class, 'contact'])->name('contact');
 Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('contactPost');
+Route::post('/quote-post',[HomeController::class, 'quotePost'])->name('quotePost');
 
 
  

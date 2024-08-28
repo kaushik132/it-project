@@ -88,7 +88,7 @@
                            </div>
                            <div class="col-lg-12 col-xl-6">
                                <div class="form-floating">
-                                   <input type="text" name="project" class="form-control border-0" id="project" placeholder="Project">
+                                   <input type="text" name="project" class="form-control border-0" id="project" value="{{old('project')}}" placeholder="Project">
                                    <label for="project">Your Project</label>
                                    <span class="text-danger">
                                     @error('project')
@@ -100,7 +100,7 @@
                            </div>
                            <div class="col-12">
                                <div class="form-floating">
-                                   <input type="text" name="subject" class="form-control border-0" id="subject" placeholder="Subject">
+                                   <input type="text" name="subject" class="form-control border-0" id="subject" value="{{old('subject')}}" placeholder="Subject">
                                    <label for="subject">Subject</label>
                                    <span class="text-danger">
                                     @error('subject')

@@ -36,6 +36,12 @@
 
         <!-- Template Stylesheet -->
         <link href="{{url('web/css/style.css')}}" rel="stylesheet">
+
+
+        {{-- toster part --}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     </head>
 
     <body>
@@ -186,13 +192,38 @@
   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 <div class="modal-body">
- <form action="">
-    <input type="text" class="form-control mt-2" placeholder="First Name">
-    <input type="text" class="form-control mt-2" placeholder="Last Name">
-    <input type="email" class="form-control mt-2" placeholder="Email ID">
-    <textarea name="" id="" rows="4" cols="6" class="form-control mt-2" placeholder="Message"></textarea>
+
+   
+
+ <form action="{{route('quotePost')}}" method="POST">
+    @csrf
+    <input type="text" name="fname" class="form-control mt-2" placeholder="First Name" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('fname')}}">
+    <span class="text-danger">
+        @error('fname')
+           {{$message}}
+        @enderror
+      </span>
+    
+    <input type="text" name="lname" class="form-control mt-2" placeholder="Last Name" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('lname')}}">
+    <span class="text-danger">
+        @error('lname')
+           {{$message}}
+        @enderror
+      </span>
+    <input type="email" name="email" class="form-control mt-2" placeholder="Email ID" value="{{old('email')}}">
+    <span class="text-danger">
+        @error('email')
+           {{$message}}
+        @enderror
+      </span>
+    <textarea name="message" id="" rows="4" cols="6" class="form-control mt-2"  placeholder="Message"></textarea>
+    <span class="text-danger">
+        @error('message')
+           {{$message}}
+        @enderror
+      </span>
  
-    <button type="button" class="btn btn-primary mt-3 w-100">Save</button>
+    <button type="submit" class="btn btn-primary mt-3 w-100">Save</button>
 </form>
 </div>
 
@@ -200,3 +231,14 @@
 </div>
 </div>
 <!-- Modal Get Quote End-->
+
+@if (Session::has('message'))
+<script>
+    toastr.options ={
+        "progressBar" : true,
+        "closeButton" : true,
+    }
+        toastr.success("{{ Session::get('message')}}", 'Success!',{timeOut:12000});
+</script>
+    
+@endif

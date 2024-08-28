@@ -20,5 +20,6 @@ Route::group([
     $router->resource('services', ServiceController::class);
     $router->resource('home-modifies', HomeModifController::class);
     $router->resource('navbars', NavbarController::class);
+    $router->resource('quotes', QuoteController::class);
 
 });
